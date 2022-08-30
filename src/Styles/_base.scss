@@ -26,9 +26,16 @@ body {
 }
 
 .layout {
-  width: 1200px;
   height: 100vh;
   padding: 2.3em;
   display: flex;
   flex-direction: column;
+
+  @include xs {
+    width: 100vw;
+  }
+
+  @include xl {
+    width: 1200px;
+  }
 }
