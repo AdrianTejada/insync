@@ -1,10 +1,2 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
-
-.content-wrapper {
-	padding: 2rem;
-	border-radius: 12px;
-	@include smallDeviceSize {
-		padding: 1.5rem;
-	}
-}
