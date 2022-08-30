@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='app-base-light'>
       <div className='layout'>
-        <Title>Notes</Title>
+        <Title>Todo List</Title>
         <div>
           <AppHeader/>
           <AppContent/>
