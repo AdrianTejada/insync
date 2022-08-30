@@ -5,11 +5,13 @@ import AppContent from './Components/AppContent';
 
 function App() {
   return (
-    <div className='container'>
-      <Title>Notes</Title>
-      <div>
-        <AppHeader/>
-        <AppContent/>
+    <div className='app-base-light'>
+      <div className='layout'>
+        <Title>Notes</Title>
+        <div>
+          <AppHeader/>
+          <AppContent/>
+        </div>
       </div>
     </div>
   );

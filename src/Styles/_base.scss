@@ -7,9 +7,28 @@
 }
 
 body {
-  width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
   font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-base-light {
+  @include appBase(map-get($light, 'bg'));
+}
+
+.app-base-dark {
+  @include appBase(map-get($dark, 'bg'))
+}
+
+.layout {
+  width: 1200px;
+  height: 100vh;
+  padding: 2.3em;
+  display: flex;
+  flex-direction: column;
 }
