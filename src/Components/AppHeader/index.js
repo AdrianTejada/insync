@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button';
+import Modal from '../Modal';
 import SelectButton from '../SelectButton';
 import './appHeader.css';
 
@@ -12,6 +13,7 @@ export default function AppHeader() {
             <option value='incomplete'>Incomplete</option>
             <option value='complete'>Complete</option>
         </SelectButton>
+        <Modal/>
     </div>
   )
 }

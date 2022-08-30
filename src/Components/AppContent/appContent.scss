@@ -1,7 +1,7 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
 
-.content__wrapper {
+.content-wrapper {
 	background-color: map-get($default, "bg-2");
 	padding: 2rem;
 	border-radius: 12px;

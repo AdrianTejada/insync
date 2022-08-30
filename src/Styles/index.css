@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+@import url("../../public/RMNeue-Regular.otf");
 *,
 *::after,
 *::before {
@@ -9,8 +11,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #f8f8ff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "RM Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,12 +30,10 @@ body {
 .emptyText {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #585858;
   text-align: center;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  background-color: #dedfe1;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

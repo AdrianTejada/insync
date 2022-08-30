@@ -1,10 +1,10 @@
-.content__wrapper {
+.content-wrapper {
   background-color: #ecedf6;
   padding: 2rem;
   border-radius: 12px;
 }
 @media only screen and (max-width: 768px) {
-  .content__wrapper {
+  .content-wrapper {
     padding: 1.5rem;
   }
 }/*# sourceMappingURL=appContent.css.map */
