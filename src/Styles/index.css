@@ -39,9 +39,18 @@ body {
 }
 
 .layout {
-  width: 1200px;
   height: 100vh;
   padding: 2.3em;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 0) {
+  .layout {
+    width: 100vw;
+  }
+}
+@media (min-width: 1200px) {
+  .layout {
+    width: 1200px;
+  }
 }/*# sourceMappingURL=index.css.map */
