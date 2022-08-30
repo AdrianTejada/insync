@@ -6,7 +6,6 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem;
-	background: map-get($default , "white");
 	margin-bottom: 1.5rem;
 	border-radius: 4px;
 	&:last-child {
@@ -30,9 +29,7 @@
 	padding: 5px;
 	cursor: pointer;
 	transition: 0.3s ease background-color;
-	&:hover {
-		background-color: map-get($default, "gray-2");
-	}
+
 	svg {
 		width: 100%;
 		height: 100%;
@@ -51,7 +48,6 @@
 	word-break: break-all;
 	font-weight: 500;
 	font-size: 1.4rem;
-	color: map-get($default , "black-2");
 
 	&--completed {
 		text-decoration: line-through;
@@ -63,7 +59,6 @@
 	font-size: 1.2rem;
 	font-weight: 300;
 	margin-top: -0.2rem;
-	color: map-get($default, "black-2");
 }
 .todoActions {
 	display: flex;
@@ -75,14 +70,9 @@
 	font-size: 2rem;
 	padding: 0.5rem;
 	border-radius: 4px;
-	background-color: map-get($default, "gray-1")var(--gray-1);
-	color: map-get($default , "black-2");
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	transition: 0.3s ease background-color;
-	&:hover {
-		background-color: var(--gray-2);
-	}
 }

@@ -9,10 +9,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: map-get($default, "bg-1");
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,12 +30,10 @@ body {
 	// display: inline-block;
 	font-size: 1.6rem;
 	font-weight: 500;
-	color: map-get($default, "black-2");
 	text-align: center;
 	margin: 0 auto;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
-	background-color: map-get($default, "gray-2");
 	width: max-content;
 	height: auto;
 }

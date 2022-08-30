@@ -1,17 +1,1 @@
-.title {
-  display: inline-block;
-  width: 100%;
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-  color: #646681;
-}
-@media only screen and (max-width: 768px) {
-  .title {
-    font-size: 3rem;
-  }
-}/*# sourceMappingURL=title.css.map */
+/*# sourceMappingURL=title.css.map */
