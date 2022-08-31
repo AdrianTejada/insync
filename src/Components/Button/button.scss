@@ -2,17 +2,17 @@
 @import '../../Styles/mixins';
 
 .button-primary-light {
-    @include button(map-get($global, 'black'), map-get($global, 'black'))
+    @include button(map-get($global, 'black'), map-get($global, 'black'), map-get($light, 'bg'))
 }
 
 .button-secondary-light {
-    @include button(map-get($global, 'gray'), map-get($light, 'gray'))
+    @include button(map-get($global, 'gray'), map-get($light, 'gray'), map-get($light, 'bg'))
 }
 
 .button-primary-dark {
-    @include button(map-get($global, 'white'), map-get($global, 'white'))
+    @include button(map-get($global, 'white'), map-get($global, 'white'), map-get($dark, 'bg'))
 }
 
 .button-secondary-dark {
-    @include button(map-get($global, 'gray'), map-get($dark, 'gray'))
+    @include button(map-get($global, 'gray'), map-get($dark, 'gray'), map-get($dark, 'bg'))
 }

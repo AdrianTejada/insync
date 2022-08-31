@@ -42,14 +42,14 @@
 }
 
 @mixin title ($color, $fontSize) {
-    h1 {
+    > h1 {
         color: $color;
         font-size: $fontSize;
         padding: 0px;
         margin: 0px;
     }
 
-    div {
+    > div {
         height: 1px;
         width: 1.2em;
         background-color: map-get($global, 'gray');
@@ -58,9 +58,10 @@
     }
 }
 
-@mixin button ($color, $border) {
+@mixin button ($color, $border, $bg) {
     color: $color;
     border: 2px solid $border;
+    background-color: $bg;
     font-size: 1.2em;
     height: 2em;
     border-radius: 8px;
@@ -78,8 +79,11 @@
     justify-content: space-between;
     align-items: center;
 
-    > * {
+    > svg {
         font-size: 1.7em;
         margin-left: .2em;
     }
+
+    // > option {
+    // }
 }
