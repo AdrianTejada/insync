@@ -8,7 +8,7 @@ export default function Button({
   ...rest
 }) {
   return (
-    <button className={`button button--${variant}`} type={type} {...rest}>
+    <button className={`button-${variant}-light`} type={type} {...rest}>
       {children}
     </button>
   )

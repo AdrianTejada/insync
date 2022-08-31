@@ -57,3 +57,29 @@
         padding: 0px;
     }
 }
+
+@mixin button ($color, $border) {
+    color: $color;
+    border: 2px solid $border;
+    font-size: 1.19em;
+    height: 2em;
+    border-radius: 8px;
+    font-family: $mainFont;
+    cursor: pointer;
+
+    padding: {
+        top: 0px;
+        bottom: 0px;
+        left: .5em;
+        right: .5em;
+    }
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > * {
+        font-size: 1.7em;
+        margin-left: .2em;
+    }
+}

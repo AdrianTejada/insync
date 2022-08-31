@@ -3,11 +3,12 @@ import Button from '../Button';
 import Modal from '../Modal';
 import SelectButton from '../SelectButton';
 import './appHeader.css';
+import { MdPlaylistAdd } from "react-icons/md";
 
 export default function AppHeader() {
   return (
     <div className='appHeader'>
-        <Button>New Note</Button>
+        <Button>new todo <MdPlaylistAdd/></Button>
         <SelectButton>
             <option value='all'>All</option>
             <option value='incomplete'>Incomplete</option>
