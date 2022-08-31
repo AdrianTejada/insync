@@ -1,2 +1,18 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
+
+.button-primary-light {
+    @include button(map-get($global, 'black'), map-get($global, 'black'))
+}
+
+.button-secondary-light {
+    @include button(map-get($global, 'gray'), map-get($light, 'gray'))
+}
+
+.button-primary-dark {
+    @include button(map-get($global, 'white'), map-get($global, 'white'))
+}
+
+.button-secondary-dark {
+    @include button(map-get($global, 'gray'), map-get($dark, 'gray'))
+}

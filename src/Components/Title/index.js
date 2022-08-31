@@ -3,8 +3,11 @@ import './title.css';
 
 export default function Title({children}) {
   return (
-    <h1 className='title'>
-      {children}
-    </h1>
+    <div className='title-light'>
+      <h1>
+        {children}
+      </h1>
+      <div/>
+    </div>
   )
 }

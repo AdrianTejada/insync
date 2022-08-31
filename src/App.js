@@ -1,15 +1,15 @@
 import './Styles/index.css'
 import Title from './Components/Title';
-import AppHeader from './Components/AppHeader';
+import Functions from './Components/Functions';
 import AppContent from './Components/AppContent';
 
 function App() {
   return (
     <div className='app-base-light'>
       <div className='layout'>
-        <Title>Notes</Title>
+        <Title>Todo List</Title>
         <div>
-          <AppHeader/>
+          <Functions/>
           <AppContent/>
         </div>
       </div>
