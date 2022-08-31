@@ -3,7 +3,7 @@ import '../Button/button.css';
 
 export default function SelectButton ({children, ...rest}) {
     return (
-      <select className='button button--secondary'>
+      <select className='button-secondary-light'>
         {children}
       </select>
     )

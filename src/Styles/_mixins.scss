@@ -51,7 +51,7 @@
 
     div {
         height: 1px;
-        width: 1.1em;
+        width: 1.2em;
         background-color: map-get($global, 'gray');
         margin-top: .5rem;
         padding: 0px;
@@ -61,14 +61,14 @@
 @mixin button ($color, $border) {
     color: $color;
     border: 2px solid $border;
-    font-size: 1.19em;
+    font-size: 1.2em;
     height: 2em;
     border-radius: 8px;
     font-family: $mainFont;
     cursor: pointer;
 
     padding: {
-        top: 0px;
+        top: .2em;
         bottom: 0px;
         left: .5em;
         right: .5em;

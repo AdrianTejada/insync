@@ -1,12 +1,12 @@
 .button-primary-light {
   color: #000000;
   border: 2px solid #000000;
-  font-size: 1.19em;
+  font-size: 1.2em;
   height: 2em;
   border-radius: 8px;
   font-family: "RM Neue";
   cursor: pointer;
-  padding-top: 0px;
+  padding-top: 0.2em;
   padding-bottom: 0px;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -22,12 +22,12 @@
 .button-secondary-light {
   color: #868686;
   border: 2px solid #A4A4A4;
-  font-size: 1.19em;
+  font-size: 1.2em;
   height: 2em;
   border-radius: 8px;
   font-family: "RM Neue";
   cursor: pointer;
-  padding-top: 0px;
+  padding-top: 0.2em;
   padding-bottom: 0px;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -43,12 +43,12 @@
 .button-primary-dark {
   color: #FFFFFF;
   border: 2px solid #FFFFFF;
-  font-size: 1.19em;
+  font-size: 1.2em;
   height: 2em;
   border-radius: 8px;
   font-family: "RM Neue";
   cursor: pointer;
-  padding-top: 0px;
+  padding-top: 0.2em;
   padding-bottom: 0px;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -64,12 +64,12 @@
 .button-secondary-dark {
   color: #868686;
   border: 2px solid #676767;
-  font-size: 1.19em;
+  font-size: 1.2em;
   height: 2em;
   border-radius: 8px;
   font-family: "RM Neue";
   cursor: pointer;
-  padding-top: 0px;
+  padding-top: 0.2em;
   padding-bottom: 0px;
   padding-left: 0.5em;
   padding-right: 0.5em;
