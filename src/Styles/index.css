@@ -42,17 +42,18 @@ body {
 
 .layout {
   height: 100vh;
-  padding: 2.3em;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 0) {
   .layout {
     width: 100vw;
+    padding: 1.4em;
   }
 }
 @media (min-width: 960px) {
   .layout {
     width: 960px;
+    padding: 2.3em;
   }
 }/*# sourceMappingURL=index.css.map */
