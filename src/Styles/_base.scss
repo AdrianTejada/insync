@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 1s ease, color 1s ease;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 1s ease;
 }
 
 .app-base-light {
@@ -35,7 +37,7 @@ body {
     width: 100vw;
   }
 
-  @include xl {
-    width: 1200px;
+  @include lg {
+    width: 960px;
   }
 }
