@@ -1,8 +1,17 @@
 .title-light > h1 {
   color: #000000;
-  font-size: 2.5em;
   padding: 0px;
   margin: 0px;
+}
+@media (min-width: 0) {
+  .title-light > h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 720px) {
+  .title-light > h1 {
+    font-size: 2.5em;
+  }
 }
 .title-light > div {
   min-height: 2px;
@@ -14,9 +23,18 @@
 
 .title-dark > h1 {
   color: #FFFFFF;
-  font-size: 2.5em;
   padding: 0px;
   margin: 0px;
+}
+@media (min-width: 0) {
+  .title-dark > h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 720px) {
+  .title-dark > h1 {
+    font-size: 2.5em;
+  }
 }
 .title-dark > div {
   min-height: 2px;
