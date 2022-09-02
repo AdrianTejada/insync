@@ -4,13 +4,14 @@ import Modal from '../Modal';
 import SelectButton from '../SelectButton';
 import './functions.css';
 import { MdPlaylistAdd } from "react-icons/md";
+import Switch from '../Switch';
 
 export default function Functions() {
   return (
     <div className='functions'>
        <div>
         <Button>new todo <MdPlaylistAdd/></Button>
-        <Button>da switch</Button>
+        <Switch>da switch</Switch>
        </div>
        <div>
           <SelectButton>

@@ -5,10 +5,10 @@
   margin: 0px;
 }
 .title-light > div {
-  height: 1px;
+  min-height: 2px;
   width: 1.2em;
   background-color: #868686;
-  margin-top: 0.5rem;
+  margin-top: 0.9em;
   padding: 0px;
 }
 
@@ -19,9 +19,9 @@
   margin: 0px;
 }
 .title-dark > div {
-  height: 1px;
+  min-height: 2px;
   width: 1.2em;
   background-color: #868686;
-  margin-top: 0.5rem;
+  margin-top: 0.9em;
   padding: 0px;
 }/*# sourceMappingURL=title.css.map */
