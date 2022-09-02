@@ -85,7 +85,7 @@
     }
 }
 
-@mixin switch ($switchBase, $border, $button) {
+@mixin switch ($switchBase, $border, $button, $position) {
     max-width: 3em;
     height: 1.6em;
     display: flex;
@@ -111,6 +111,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        right:$position ;
+        transition: right 1s ease, background-color 1s ease, border 1s ease;
 
         > * {
             color: map-get($global, 'gray');

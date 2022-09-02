@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './switch.css';
 import { TbNorthStar } from "react-icons/tb";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+
 
 export default function Switch() {
   const [theme, setTheme] = useState('light')
@@ -12,7 +14,7 @@ export default function Switch() {
     >
       <div/>
       <button>
-        <TbNorthStar/>
+        {theme === 'light' ? <TbNorthStar/> : <BsFillMoonStarsFill/>}
       </button>
     </div>
   )

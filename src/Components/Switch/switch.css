@@ -23,14 +23,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  right: 0px;
+  transition: right 1s ease, background-color 1s ease, border 1s ease;
 }
 .switch-light > button > * {
   color: #868686;
   font-size: 1em;
-}
-.switch-light > button {
-  right: 0px;
-  transition: left 1s ease, background-color 1s ease, right 1s ease;
 }
 
 .switch-dark {
@@ -58,12 +56,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  right: 50%;
+  transition: right 1s ease, background-color 1s ease, border 1s ease;
 }
 .switch-dark > button > * {
   color: #868686;
   font-size: 1em;
-}
-.switch-dark > button {
-  left: 0px;
-  transition: left 1s ease, background-color 1s ease, right 1s ease;
 }/*# sourceMappingURL=switch.css.map */
