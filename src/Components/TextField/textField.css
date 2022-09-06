@@ -1,0 +1,41 @@
+.text-field-light {
+  width: 100%;
+}
+.text-field-light > h3 {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+.text-field-light > input {
+  width: 100%;
+  border: none;
+  font-size: 1.125em;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #A4A4A4;
+  color: #000000;
+}
+.text-field-light > input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+
+.text-field-dark {
+  width: 100%;
+}
+.text-field-dark > h3 {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #FFFFFF;
+}
+.text-field-dark > input {
+  width: 100%;
+  border: none;
+  font-size: 1.125em;
+  background-color: #000000;
+  border-bottom: 2px solid #676767;
+  color: #FFFFFF;
+}
+.text-field-dark > input:focus {
+  outline: none;
+  border-bottom: 2px solid #FFFFFF;
+}/*# sourceMappingURL=textField.css.map */

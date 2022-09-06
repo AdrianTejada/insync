@@ -1,0 +1,10 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.text-field-light {
+    @include textField(map-get($global, 'black'), map-get($global, 'white'), map-get($light, 'gray'))
+}
+
+.text-field-dark {
+    @include textField(map-get($global, 'white'), map-get($global, 'black'), map-get($dark, 'gray'))
+}
