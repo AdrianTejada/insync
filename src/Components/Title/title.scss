@@ -1,10 +1,18 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
 
-.title-light {  
+.title-main-light {  
     @include title (map-get($global, 'black'), 2.5em, 2em)
 }
 
-.title-dark {  
+.title-main-dark {  
     @include title (map-get($global, 'white'), 2.5em, 2em)
+}
+
+.title-secondary-light {  
+    @include title (map-get($global, 'black'), 1.56em, 1.56em)
+}
+
+.title-secondary-dark {  
+    @include title (map-get($global, 'white'), 1.56em, 1.56em)
 }

@@ -1,19 +1,19 @@
-.title-light > h1 {
+.title-main-light > h1 {
   color: #000000;
   padding: 0px;
   margin: 0px;
 }
 @media (min-width: 0) {
-  .title-light > h1 {
+  .title-main-light > h1 {
     font-size: 2em;
   }
 }
 @media (min-width: 720px) {
-  .title-light > h1 {
+  .title-main-light > h1 {
     font-size: 2.5em;
   }
 }
-.title-light > div {
+.title-main-light > div {
   min-height: 2px;
   width: 1.2em;
   background-color: #868686;
@@ -21,22 +21,68 @@
   padding: 0px;
 }
 
-.title-dark > h1 {
+.title-main-dark > h1 {
   color: #FFFFFF;
   padding: 0px;
   margin: 0px;
 }
 @media (min-width: 0) {
-  .title-dark > h1 {
+  .title-main-dark > h1 {
     font-size: 2em;
   }
 }
 @media (min-width: 720px) {
-  .title-dark > h1 {
+  .title-main-dark > h1 {
     font-size: 2.5em;
   }
 }
-.title-dark > div {
+.title-main-dark > div {
+  min-height: 2px;
+  width: 1.2em;
+  background-color: #868686;
+  margin-top: 0.9em;
+  padding: 0px;
+}
+
+.title-secondary-light > h1 {
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+@media (min-width: 0) {
+  .title-secondary-light > h1 {
+    font-size: 1.56em;
+  }
+}
+@media (min-width: 720px) {
+  .title-secondary-light > h1 {
+    font-size: 1.56em;
+  }
+}
+.title-secondary-light > div {
+  min-height: 2px;
+  width: 1.2em;
+  background-color: #868686;
+  margin-top: 0.9em;
+  padding: 0px;
+}
+
+.title-secondary-dark > h1 {
+  color: #FFFFFF;
+  padding: 0px;
+  margin: 0px;
+}
+@media (min-width: 0) {
+  .title-secondary-dark > h1 {
+    font-size: 1.56em;
+  }
+}
+@media (min-width: 720px) {
+  .title-secondary-dark > h1 {
+    font-size: 1.56em;
+  }
+}
+.title-secondary-dark > div {
   min-height: 2px;
   width: 1.2em;
   background-color: #868686;
