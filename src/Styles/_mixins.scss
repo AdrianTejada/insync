@@ -147,5 +147,29 @@
     background-color: $bg;
     padding: 2em;
     box-shadow: 0px 2px 5px 2px gray;
-    
+}
+
+@mixin textField($color, $bg, $border) {
+    width: 100%;
+
+    > h3 {
+        font-size: 0.8em;
+        margin-bottom: .5em;
+        color: $color;
+        // font-family: $secondaryFont;
+    }
+
+    > input {
+        width: 100%;
+        border: none;
+        font-size: 1.125em;
+        background-color: $bg;
+        border-bottom: 2px solid $border;
+        color: $color;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $color;
+        }
+    }
 }
