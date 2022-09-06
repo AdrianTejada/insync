@@ -139,7 +139,6 @@
 }
 
 @mixin modalContainer ($bg) {
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -147,6 +146,15 @@
     background-color: $bg;
     padding: 2em;
     box-shadow: 0px 2px 5px 2px gray;
+
+    @include xs {
+        width: 100vw;
+    }
+
+    @include sm {
+        width: 480px;
+    }
+    // width: 98%;
 }
 
 @mixin textField($color, $bg, $border) {
@@ -166,6 +174,7 @@
         background-color: $bg;
         border-bottom: 2px solid $border;
         color: $color;
+        border-radius: 0px;
 
         &:focus {
             outline: none;

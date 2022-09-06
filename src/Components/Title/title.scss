@@ -10,9 +10,9 @@
 }
 
 .title-secondary-light {  
-    @include title (map-get($global, 'black'), 1.56em, 1.56em)
+    @include title (map-get($global, 'black'), 1.56em, 1.2em)
 }
 
 .title-secondary-dark {  
-    @include title (map-get($global, 'white'), 1.56em, 1.56em)
+    @include title (map-get($global, 'white'), 1.56em, 1.2em)
 }
