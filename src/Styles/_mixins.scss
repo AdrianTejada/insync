@@ -159,6 +159,7 @@
 
 @mixin textField($color, $bg, $border) {
     width: 100%;
+    margin-top: 1.5em;
 
     > h3 {
         font-size: 0.8em;
@@ -170,11 +171,16 @@
     > input {
         width: 100%;
         border: none;
-        font-size: 1.125em;
+        font-size: 1em;
         background-color: $bg;
         border-bottom: 2px solid $border;
         color: $color;
         border-radius: 0px;
+
+        padding: {
+            top: .2em;
+            bottom: .2em;
+        };
 
         &:focus {
             outline: none;
