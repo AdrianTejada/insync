@@ -4,16 +4,10 @@
 }
 
 .button-row {
+    width: 100%;
     margin-top: 1.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    > * {
-        margin-right: 1em;
-    }
-
-    :last-child {
-        margin: 0px;
-    }
+    justify-content: space-between;
 }

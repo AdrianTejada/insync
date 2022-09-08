@@ -1,21 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ModalWrapper from '../ModalWrapper';
 import ModalFunctions from '../ModalFunctions';
-
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../../Slices/todoSlice'; 
+import {v4 as uuid} from 'uuid';
 
 export default function NewTodoModal({
     todoModal,
     setTodoModal,
 }) {
+  const [title, setTitle] = useState();
+  const [descript, setDescript] = useState();
+  const [color, setColor] = useState('0');
+
+  const dispatch = useDispatch();
+
+  const handleSubmit  = () => {
+    if (title) {
+      dispatch(addTodo({
+        id: uuid(),
+        title,
+        description: descript,
+        color,
+        date: new Date().toLocaleDateString(),
+        status: 'incomplete',
+    }));
+    }
+  };
+
   return (<div>
       {todoModal && (
         <ModalWrapper title='New Todo' onClose={()=>setTodoModal(false)}>
         <ModalFunctions
           button1Text='create todo'
-          button2Text='cancel'
-          onButton1Click={()=>console.log('hello')}
+          onButton1Click={handleSubmit}
           onButton2Click={()=>setTodoModal(false)}
-          onTitleChange={(text)=>console.log(text)}
+          onTitleChange={(text)=>setTitle(text)}
+          onDescriptChange={(text)=>setDescript(text)}
+          currentColor={(color)=>setColor(color)}
         />
       </ModalWrapper>)}
   </div>)
