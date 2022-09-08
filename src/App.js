@@ -4,13 +4,15 @@ import Functions from './Components/Functions';
 import AppContent from './Components/AppContent';
 import NewTodoModal from './Components/NewTodoModal';
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [todoModal, setTodoModal] = useState(false);
   // const [aboutModal, setAboutModal] = useState(false);
 
   return (
-    <div>
+    <>
+      <Toaster/>
       <NewTodoModal
         todoModal={todoModal}
         setTodoModal={setTodoModal}
@@ -26,7 +28,7 @@ function App() {
           </div>
         </div>
       </div>  
-    </div>
+    </>
   );
 }
 
