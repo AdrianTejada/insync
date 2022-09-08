@@ -5,11 +5,16 @@ import './functions.css';
 import { MdPlaylistAdd } from "react-icons/md";
 import Switch from '../Switch';
 
-export default function Functions() {
+export default function Functions({
+  onTodoClick=()=>{},
+  onAboutClick=()=>{},
+}) {
   return (
     <div className='functions'>
        <div>
-        <Button>new todo<MdPlaylistAdd/></Button>
+        <Button onClick={onTodoClick}>
+          new todo<MdPlaylistAdd/>
+          </Button>
         <Switch/>
        </div>
        <div>
@@ -18,7 +23,9 @@ export default function Functions() {
             <option value='incomplete'>incomplete</option>
             <option value='complete'>complete</option>
           </SelectButton>
-          <Button variant={'secondary'}>about</Button>
+          <Button variant={'secondary'} onClick={onAboutClick}>
+            about
+          </Button>
        </div>
     </div>
   )
