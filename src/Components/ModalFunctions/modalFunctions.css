@@ -1,4 +1,17 @@
 .modal-functions {
   margin-top: 0.65em;
   width: 100%;
+}
+
+.button-row {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-row > * {
+  margin-right: 1em;
+}
+.button-row :last-child {
+  margin: 0px;
 }/*# sourceMappingURL=modalFunctions.css.map */
