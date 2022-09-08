@@ -16,9 +16,9 @@
 }
 
 .modal-container-light {
-    @include modalContainer(map-get($light, 'bg'));
+    @include modalContainer(map-get($light, 'bg'), map-get($global, 'black'));
 }
 
 .modal-container-dark {
-    @include modalContainer(map-get($dark, 'bg'));
+    @include modalContainer(map-get($dark, 'bg'), map-get($global, 'white'));
 }

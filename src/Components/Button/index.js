@@ -5,10 +5,10 @@ export default function Button({
   children,
   variant='primary',
   type='button',
-  ...rest
+  onClick=()=>{},
 }) {
   return (
-    <button className={`button-${variant}-light`} type={type} {...rest}>
+    <button className={`button-${variant}-light`} type={type} onClick={onClick}>
       {children}
     </button>
   )

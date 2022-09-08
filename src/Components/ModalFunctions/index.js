@@ -9,6 +9,10 @@ export default function ModalFunctions({
     onDescriptChange=()=>{},
     titleValue,
     descriptValue,
+    button1Text,
+    onButton1Click=()=>{},
+    button2Text,
+    onButton2Click=()=>{}
 }) {
   return (
     <div className='modal-functions'>
@@ -26,11 +30,11 @@ export default function ModalFunctions({
         </TextField>
         <ColorSelect onChange={(e)=>console.log(e)}/>
         <div className='button-row'>
-            <Button>
-                create todo
+            <Button onClick={onButton1Click}>
+                {button1Text}
             </Button>
-            <Button variant='secondary'>
-                cancel
+            <Button onClick={onButton2Click} variant='secondary'>
+                {button2Text}
             </Button>
         </div>
     </div>
