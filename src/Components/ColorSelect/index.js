@@ -3,13 +3,13 @@ import './colorSelect.css';
 
 export default function ColorSelect({
     selectedColor='0',
-    onChange=()=>{}
+    currentColor=()=>{}
 }) {
     const [color, setColor] = useState(selectedColor)
 
     const handleChange = (color) => {
         setColor(color);
-        onChange(color);
+        currentColor(color);
     }
 
   return (
