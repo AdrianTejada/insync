@@ -138,7 +138,8 @@
     // WORK IN PROGRESS
 }
 
-@mixin modalContainer ($bg) {
+@mixin modalContainer ($bg, $close) {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -153,6 +154,21 @@
 
     @include sm {
         width: 480px;
+    }
+
+    > button {
+        padding: 0;
+        margin: 0;
+        background-color: none;
+        border: none;
+
+        > svg {
+            position: absolute;
+            top: .5em;
+            right: .5em;
+            color: $close;
+            font-size: 1.8em;
+        }
     }
     // width: 98%;
 }
