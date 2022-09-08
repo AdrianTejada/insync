@@ -1,1 +1,48 @@
-/*# sourceMappingURL=todoItem.css.map */
+.todo-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item-info-light {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.todo-item-info-light > button {
+  margin: 1.125em;
+  width: 1.25em;
+  height: 1.25em;
+}
+.todo-item-info-light > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000000;
+}
+.todo-item-info-light > div > h4 {
+  font-size: 1.125em;
+  font-family: "RM Neue";
+}
+.todo-item-info-light > div > h5 {
+  font-size: 0.875em;
+  font-family: "RM Neue";
+}
+.todo-item-info-light > div > h6 {
+  font-size: 0.875em;
+  font-family: "Fira Mono", monospace;
+}
+
+.todo-item-controls {
+  display: flex;
+  align-items: center;
+}
+.todo-item-controls > svg {
+  color: #868686;
+  margin-right: 1em;
+}
+.todo-item-controls :last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=todoItem.css.map */

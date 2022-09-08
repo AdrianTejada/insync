@@ -1,6 +1,6 @@
 import React from 'react';
 import './appContent.css';
-// import TodoItem from '../TodoItem';
+import TodoItem from '../TodoItem';
 import { useSelector } from 'react-redux';
 
 export default function AppContent() {
@@ -11,12 +11,7 @@ export default function AppContent() {
   return (
     <div className='appContent'>
       {sortedTodoList && sortedTodoList.length > 0
-      ? sortedTodoList.map((item)=><ul key={item.id}>
-        <li>{item.title}</li>
-        <li>{item.description}</li>
-        <li>{item.time}</li>
-      </ul>)
-      
+      ? sortedTodoList.map((item)=><TodoItem key={item.id} item={item}/>)
       : <div>no todos!</div>
       }
     </div>

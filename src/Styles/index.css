@@ -11,12 +11,12 @@
   padding: 0;
   transition: background-color 1s ease, color 1s ease;
   -webkit-tap-highlight-color: transparent;
+  font-family: "RM Neue";
 }
 
 body {
   min-width: 100vw;
   min-height: 100vh;
-  font-family: "RM Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;

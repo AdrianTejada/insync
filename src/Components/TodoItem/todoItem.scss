@@ -1,2 +1,28 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
+
+.todo-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-item-info-light {
+    @include todoItemInfo (map-get($global, 'black'));
+}
+
+.todo-item-controls {
+    display: flex;
+    align-items: center;
+
+    > svg {
+        color: map-get($global, 'gray');
+        margin-right: 1em;
+    }
+
+    :last-child {
+        margin-right: 0;
+    }
+}
