@@ -2,6 +2,7 @@ import React from 'react';
 import './modalFunctions.css';
 import TextField from '../TextField';
 import ColorSelect from '../ColorSelect';
+import Button from '../Button';
 
 export default function ModalFunctions({
     onTitleChange=()=>{},
@@ -23,7 +24,15 @@ export default function ModalFunctions({
         >
             description
         </TextField>
-        <ColorSelect/>
+        <ColorSelect onChange={(e)=>console.log(e)}/>
+        <div className='button-row'>
+            <Button>
+                create todo
+            </Button>
+            <Button variant='secondary'>
+                cancel
+            </Button>
+        </div>
     </div>
   )
 }

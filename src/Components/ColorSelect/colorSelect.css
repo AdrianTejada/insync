@@ -27,13 +27,18 @@
   opacity: 0;
 }
 .color-select-light > div > input:checked + label {
-  border: 2px solid black;
+  border: 2px solid #000000;
 }
 .color-select-light > div > label {
-  width: 1.125em;
-  height: 1.125em;
+  width: 1.25em;
+  height: 1.25em;
   border-radius: 1em;
   display: inline-block;
+  margin-right: 0.5em;
+  border: 1px solid gray;
+}
+.color-select-light > div > label:last-child {
+  margin-right: 0;
 }
 
 .selected-light {

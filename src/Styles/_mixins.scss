@@ -188,3 +188,28 @@
         }
     }
 }
+
+@mixin colorSelect ($border, $bg) {
+    > div {
+        > input {
+            width: 0;
+            opacity: 0;
+            &:checked + label{
+                border: 2px solid $border;
+            }
+        }
+
+        > label {
+            width: 1.25em;
+            height: 1.25em;
+            border-radius: 1em;
+            display: inline-block;
+            margin-right: .5em;
+            border: 1px solid gray;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
