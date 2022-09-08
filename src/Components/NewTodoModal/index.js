@@ -4,6 +4,7 @@ import ModalFunctions from '../ModalFunctions';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../../Slices/todoSlice'; 
 import {v4 as uuid} from 'uuid';
+import toast from 'react-hot-toast';
 
 export default function NewTodoModal({
     todoModal,
@@ -22,9 +23,17 @@ export default function NewTodoModal({
         title,
         description: descript,
         color,
-        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleString(),
         status: 'incomplete',
-    }));
+     }));
+      toast.success('added new todo!');
+      setTitle(null);
+      setDescript(null);
+      setColor('0');
+      setTodoModal(false);
+    } 
+    else {
+      toast.error('title is empty')
     }
   };
 
