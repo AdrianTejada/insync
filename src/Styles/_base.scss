@@ -6,12 +6,12 @@
   padding: 0;
   transition: background-color 1s ease, color 1s ease;
   -webkit-tap-highlight-color:transparent;
+  font-family: $mainFont;
 }
 
 body {
   min-width: 100vw;
   min-height: 100vh;
-  font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
