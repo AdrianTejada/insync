@@ -1,0 +1,37 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.color-select-light {
+    @include modalInput(map-get($global, 'black'), map-get($global, 'white'), map-get($light, 'gray'));
+
+    > div {
+        > input {
+            width: 0;
+            opacity: 0;
+            &:checked + label{
+                border: 2px solid black;
+            }
+        }
+
+        > label {
+            width: 1.125em;
+            height: 1.125em;
+            border-radius: 1em;
+            display: inline-block;
+        }
+    }
+}
+
+.selected-light {
+    border: 1px solid map-get($global, 'black');
+}
+
+.selected-dark {
+    border: 1px solid map-get($global, 'white');
+}
+
+@each $key, $val in $gradient {
+    .gradient-#{$key} {
+        background-color: $val;
+    }
+}

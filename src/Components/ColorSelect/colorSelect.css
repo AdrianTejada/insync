@@ -1,0 +1,65 @@
+.color-select-light {
+  width: 100%;
+  margin-top: 1.5em;
+}
+.color-select-light > h3 {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+.color-select-light > input {
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #A4A4A4;
+  color: #000000;
+  border-radius: 0px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.color-select-light > input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+.color-select-light > div > input {
+  width: 0;
+  opacity: 0;
+}
+.color-select-light > div > input:checked + label {
+  border: 2px solid black;
+}
+.color-select-light > div > label {
+  width: 1.125em;
+  height: 1.125em;
+  border-radius: 1em;
+  display: inline-block;
+}
+
+.selected-light {
+  border: 1px solid #000000;
+}
+
+.selected-dark {
+  border: 1px solid #FFFFFF;
+}
+
+.gradient-1 {
+  background-color: #FF7C5E;
+}
+
+.gradient-2 {
+  background-color: #FF8959;
+}
+
+.gradient-3 {
+  background-color: #FF9654;
+}
+
+.gradient-4 {
+  background-color: #FFA34F;
+}
+
+.gradient-5 {
+  background-color: #FFB04A;
+}/*# sourceMappingURL=colorSelect.css.map */

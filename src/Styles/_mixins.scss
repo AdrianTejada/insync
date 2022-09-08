@@ -139,7 +139,6 @@
 }
 
 @mixin modalContainer ($bg) {
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -147,25 +146,41 @@
     background-color: $bg;
     padding: 2em;
     box-shadow: 0px 2px 5px 2px gray;
+
+    @include xs {
+        width: 100vw;
+    }
+
+    @include sm {
+        width: 480px;
+    }
+    // width: 98%;
 }
 
-@mixin textField($color, $bg, $border) {
+
+@mixin modalInput($color, $bg, $border) {
     width: 100%;
+    margin-top: 1.5em;
 
     > h3 {
         font-size: 0.8em;
         margin-bottom: .5em;
         color: $color;
-        // font-family: $secondaryFont;
     }
 
     > input {
         width: 100%;
         border: none;
-        font-size: 1.125em;
+        font-size: 1em;
         background-color: $bg;
         border-bottom: 2px solid $border;
         color: $color;
+        border-radius: 0px;
+
+        padding: {
+            top: .2em;
+            bottom: .2em;
+        };
 
         &:focus {
             outline: none;
