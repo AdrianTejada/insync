@@ -23,11 +23,17 @@ export default function NewTodoModal({
         title,
         description: descript,
         color,
-        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleString(),
         status: 'incomplete',
-    }));
-    toast.success('added new todo!');
-    setTodoModal(false);
+     }));
+      toast.success('added new todo!');
+      setTitle(null);
+      setDescript(null);
+      setColor('0');
+      setTodoModal(false);
+    } 
+    else {
+      toast.error('title is empty')
     }
   };
 
