@@ -157,7 +157,8 @@
     // width: 98%;
 }
 
-@mixin textField($color, $bg, $border) {
+
+@mixin modalInput($color, $bg, $border) {
     width: 100%;
     margin-top: 1.5em;
 
@@ -165,7 +166,6 @@
         font-size: 0.8em;
         margin-bottom: .5em;
         color: $color;
-        // font-family: $secondaryFont;
     }
 
     > input {

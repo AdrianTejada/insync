@@ -1,6 +1,7 @@
 import React from 'react';
 import './modalFunctions.css';
 import TextField from '../TextField';
+import ColorSelect from '../ColorSelect';
 
 export default function ModalFunctions({
     onTitleChange=()=>{},
@@ -22,6 +23,7 @@ export default function ModalFunctions({
         >
             description
         </TextField>
+        <ColorSelect/>
     </div>
   )
 }
