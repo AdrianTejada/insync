@@ -2,25 +2,26 @@ import './Styles/index.css'
 import Title from './Components/Title';
 import Functions from './Components/Functions';
 import AppContent from './Components/AppContent';
-import ModalWrapper from './Components/ModalWrapper';
-import ModalFunctions from './Components/ModalFunctions';
+import NewTodoModal from './Components/NewTodoModal';
+import { useState } from 'react';
 
 function App() {
+  const [todoModal, setTodoModal] = useState(false);
+  // const [aboutModal, setAboutModal] = useState(false);
+
   return (
     <div>
-      <ModalWrapper title='New Todo' onClose={()=>console.log('close')}>
-        <ModalFunctions
-          button1Text='create todo'
-          button2Text='cancel'
-          onButton1Click={()=>console.log('hello')}
-          onTitleChange={(text)=>console.log(text)}
-        />
-      </ModalWrapper>
+      <NewTodoModal
+        todoModal={todoModal}
+        setTodoModal={setTodoModal}
+      />
       <div className='app-base-light'>
         <div className='layout'>
           <Title>Todo List</Title>
           <div>
-            <Functions/>
+            <Functions
+              onTodoClick={()=>setTodoModal(true)}
+            />
             <AppContent/>
           </div>
         </div>
