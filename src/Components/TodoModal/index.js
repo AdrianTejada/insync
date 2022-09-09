@@ -52,9 +52,6 @@ export default function TodoModal({
         }));
 
         toast.success('updated');
-        setTitle(null);
-        setDescript(null);
-        setColor('0');
         setOpenModal(false);
       }
     } 
