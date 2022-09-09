@@ -2,27 +2,28 @@ import './Styles/index.css'
 import Title from './Components/Title';
 import Functions from './Components/Functions';
 import AppContent from './Components/AppContent';
-import NewTodoModal from './Components/NewTodoModal';
+import TodoModal from './Components/TodoModal';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
-  const [todoModal, setTodoModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   // const [aboutModal, setAboutModal] = useState(false);
 
   return (
     <>
       <Toaster/>
-      <NewTodoModal
-        todoModal={todoModal}
-        setTodoModal={setTodoModal}
+      <TodoModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        type='new'
       />
       <div className='app-base-light'>
         <div className='layout'>
           <Title>Todo List</Title>
           <div>
             <Functions
-              onTodoClick={()=>setTodoModal(true)}
+              onTodoClick={()=>setOpenModal(true)}
             />
             <AppContent/>
           </div>

@@ -6,9 +6,10 @@ import { addTodo } from '../../Slices/todoSlice';
 import {v4 as uuid} from 'uuid';
 import toast from 'react-hot-toast';
 
-export default function NewTodoModal({
-    todoModal,
-    setTodoModal,
+export default function TodoModal({
+  type,
+  openModal,
+  setOpenModal,
 }) {
   const [title, setTitle] = useState();
   const [descript, setDescript] = useState();
@@ -18,32 +19,37 @@ export default function NewTodoModal({
 
   const handleSubmit  = () => {
     if (title) {
-      dispatch(addTodo({
-        id: uuid(),
-        title,
-        description: descript,
-        color,
-        time: new Date().toLocaleString(),
-        status: 'incomplete',
-     }));
-      toast.success('added new todo!');
-      setTitle(null);
-      setDescript(null);
-      setColor('0');
-      setTodoModal(false);
+      if (type === 'new') {
+        dispatch(addTodo({
+          id: uuid(),
+          title,
+          description: descript,
+          color,
+          time: new Date().toLocaleString(),
+          status: 'incomplete',
+       }));
+        toast.success('added new todo!');
+        setTitle(null);
+        setDescript(null);
+        setColor('0');
+        setOpenModal(false);
+      }
+      if (type === 'update') {
+        console.log('updating task');
+      }
     } 
     else {
-      toast.error('title is empty')
+      toast.error('title is empty');
     }
   };
 
   return (<div>
-      {todoModal && (
-        <ModalWrapper title='New Todo' onClose={()=>setTodoModal(false)}>
+      {openModal && (
+        <ModalWrapper title={type === 'new' ? 'New Todo' : 'Edit Todo' } onClose={()=>setOpenModal(false)}>
         <ModalFunctions
-          button1Text='create todo'
+          button1Text={type === 'new' ? 'create todo' : 'confirm'}
           onButton1Click={handleSubmit}
-          onButton2Click={()=>setTodoModal(false)}
+          onButton2Click={()=>setOpenModal(false)}
           onTitleChange={(text)=>setTitle(text)}
           onDescriptChange={(text)=>setDescript(text)}
           currentColor={(color)=>setColor(color)}

@@ -229,11 +229,12 @@
 
 @mixin appContent ($border) {
     width: 100%;
+    // position:static;
     > * {
         border-bottom: 1px solid $border;
     }
     
-    :last-child {
+    :last-child, :first-child{
         border:none;
     }
 }

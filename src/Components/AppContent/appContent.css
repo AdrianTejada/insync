@@ -4,6 +4,6 @@
 .app-content-light > * {
   border-bottom: 1px solid #A4A4A4;
 }
-.app-content-light :last-child {
+.app-content-light :last-child, .app-content-light :first-child {
   border: none;
 }/*# sourceMappingURL=appContent.css.map */
