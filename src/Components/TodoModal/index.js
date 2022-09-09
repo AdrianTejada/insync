@@ -37,7 +37,7 @@ export default function TodoModal({
         setColor('0');
         setOpenModal(false);
       }
-      if (type === 'update') {
+      if (type === 'edit') {
         console.log('updating task');
       }
     } 
