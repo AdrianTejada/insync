@@ -2,9 +2,9 @@
 @import '../../Styles/mixins';
 
 .switch-light {
-    @include switch (map-get($light, 'switchBase'), map-get($light, 'gray'), map-get($light, 'bg'), 0px);
+    @include switch (map-get($light, 'switchBase'), map-get($light, 'gray'), map-get($light, 'bg'), left);
 }
 
 .switch-dark {
-    @include switch (map-get($dark, 'switchBase'), map-get($dark, 'gray'), map-get($dark, 'bg'), 50%);
+    @include switch (map-get($dark, 'switchBase'), map-get($dark, 'gray'), map-get($dark, 'bg'), right);
 }

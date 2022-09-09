@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ModalWrapper from '../ModalWrapper';
 import ModalFunctions from '../ModalFunctions';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../../Slices/todoSlice'; 
+import { addTodo, updateTodo } from '../../Slices/todoSlice'; 
 import {v4 as uuid} from 'uuid';
 import toast from 'react-hot-toast';
 
@@ -12,7 +12,10 @@ export default function TodoModal({
   setOpenModal,
   currentTitle,
   currentDescript,
+  id,
   selectedColor,
+  status,
+  time,
 }) {
   const [title, setTitle] = useState(currentTitle);
   const [descript, setDescript] = useState(currentDescript);
@@ -30,7 +33,8 @@ export default function TodoModal({
           color,
           time: new Date().toLocaleString(),
           status: 'incomplete',
-       }));
+        }));
+
         toast.success('added new todo!');
         setTitle(null);
         setDescript(null);
@@ -38,7 +42,17 @@ export default function TodoModal({
         setOpenModal(false);
       }
       if (type === 'edit') {
-        console.log('updating task');
+        dispatch(updateTodo({
+          id,
+          title,
+          description: descript,
+          color,
+          time,
+          status
+        }));
+
+        toast.success('updated');
+        setOpenModal(false);
       }
     } 
     else {

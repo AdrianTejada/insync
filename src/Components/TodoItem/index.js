@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
 import './todoItem.css';
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
-// import { VscChevronUp } from "react-icons/vsc";
-import { VscEdit } from "react-icons/vsc";
-import { VscTrash } from "react-icons/vsc";
+import { VscChevronDown, VscChevronUp, VscEdit, VscTrash } from "react-icons/vsc";
 import TodoModal from '../TodoModal'; 
+import { useDispatch } from 'react-redux';
+import { deleteTodo } from '../../Slices/todoSlice';
+import { toast } from 'react-hot-toast';
 
 export default function TodoItem({
   item
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
-
+  const dispatch = useDispatch()
+  
   const {
     title,
     description,
     time,
     color,
+    id,
+    status,
   } = item;
+  
+  const handleDelete = ()=> {
+    dispatch(deleteTodo(id));
+    toast.success('good work!')
+  }
 
   return (
     <>
@@ -28,6 +36,9 @@ export default function TodoItem({
         selectedColor={color}
         currentTitle={title}
         currentDescript={description}
+        id={id}
+        status={status}
+        time={time}
       />
       <div className='todo-item'>
         <span className='todo-item-info-light'>
@@ -47,7 +58,7 @@ export default function TodoItem({
           <button onClick={()=>setOpenModal(true)}>
             <VscEdit/>
           </button>
-          <button onClick={()=>console.log(description)}>
+          <button onClick={handleDelete}>
             <VscTrash/>
           </button>
         </span>
