@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './todoItem.css';
 import { VscChevronDown, VscChevronUp, VscEdit, VscTrash } from "react-icons/vsc";
 import TodoModal from '../TodoModal'; 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo } from '../../Slices/todoSlice';
 import { toast } from 'react-hot-toast';
 
@@ -12,6 +12,7 @@ export default function TodoItem({
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
   const dispatch = useDispatch()
+  const theme = useSelector((state)=>state.theme.todoTheme);
   
   const {
     title,
@@ -41,7 +42,7 @@ export default function TodoItem({
         time={time}
       />
       <div className='todo-item'>
-        <span className='todo-item-info-light'>
+        <span className={`todo-item-info-${theme}`}>
           <button/>
           <div>
             <p>{title}</p>

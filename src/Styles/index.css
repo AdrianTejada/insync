@@ -9,7 +9,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: background-color 1s ease, color 1s ease;
+  transition: background-color 1s ease, color 1s ease, border 1s ease;
   -webkit-tap-highlight-color: transparent;
   font-family: "RM Neue";
 }

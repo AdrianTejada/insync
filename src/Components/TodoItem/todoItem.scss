@@ -18,6 +18,10 @@
     @include todoItemInfo (map-get($global, 'black'));
 }
 
+.todo-item-info-dark {
+    @include todoItemInfo (map-get($global, 'white'));
+}
+
 .todo-item-controls {
     display: flex;
     align-items: center;
