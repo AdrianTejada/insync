@@ -9,7 +9,7 @@ export default function AppContent() {
 
   sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
   return (
-    <div className='appContent'>
+    <div className='app-content-light'>
       {sortedTodoList && sortedTodoList.length > 0
       ? sortedTodoList.map((item)=><TodoItem key={item.id} item={item}/>)
       : <div>no todos!</div>
