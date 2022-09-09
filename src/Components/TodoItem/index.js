@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './todoItem.css';
-import { VscChevronDown } from "react-icons/vsc";
+import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 // import { VscChevronUp } from "react-icons/vsc";
 import { VscEdit } from "react-icons/vsc";
 import { VscTrash } from "react-icons/vsc";
@@ -10,6 +10,7 @@ export default function TodoItem({
   item
 }) {
   const [openModal, setOpenModal] = useState(false);
+  const [expand, setExpand] = useState(false);
 
   const {
     title,
@@ -33,18 +34,20 @@ export default function TodoItem({
           <button/>
           <div>
             <p>{title}</p>
-            <p>{description}</p>
+            {expand ? <p>{description}</p> : null}
             <p>{time}</p>
           </div>
         </span>
         <span className='todo-item-controls'>
-          <button>
-            <VscChevronDown className='chevron'/>
-          </button>
+          {description ? 
+             <button onClick={()=>setExpand(!expand)}>
+              {expand ? <VscChevronUp className='chevron'/> : <VscChevronDown className='chevron'/>}
+            </button>
+          : null}
           <button onClick={()=>setOpenModal(true)}>
             <VscEdit/>
           </button>
-          <button>
+          <button onClick={()=>console.log(description)}>
             <VscTrash/>
           </button>
         </span>
