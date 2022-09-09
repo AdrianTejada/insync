@@ -10,10 +10,13 @@ export default function TodoModal({
   type,
   openModal,
   setOpenModal,
+  currentTitle,
+  currentDescript,
+  selectedColor,
 }) {
-  const [title, setTitle] = useState();
-  const [descript, setDescript] = useState();
-  const [color, setColor] = useState('0');
+  const [title, setTitle] = useState(currentTitle);
+  const [descript, setDescript] = useState(currentDescript);
+  const [color, setColor] = useState(selectedColor ? selectedColor : '0');
 
   const dispatch = useDispatch();
 
@@ -50,9 +53,12 @@ export default function TodoModal({
           button1Text={type === 'new' ? 'create todo' : 'confirm'}
           onButton1Click={handleSubmit}
           onButton2Click={()=>setOpenModal(false)}
+          titleValue={title}
           onTitleChange={(text)=>setTitle(text)}
+          descriptValue={descript}
           onDescriptChange={(text)=>setDescript(text)}
           currentColor={(color)=>setColor(color)}
+          selectedColor={color}
         />
       </ModalWrapper>)}
   </div>)

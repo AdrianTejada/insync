@@ -15,10 +15,7 @@ export default function TodoItem({
     title,
     description,
     time,
-    // status,
-    // color,
-    // expanded,
-    // id
+    color,
   } = item;
 
   return (
@@ -27,6 +24,9 @@ export default function TodoItem({
         openModal={openModal}
         setOpenModal={setOpenModal}
         type='edit'
+        selectedColor={color}
+        currentTitle={title}
+        currentDescript={description}
       />
       <div className='todo-item'>
         <span className='todo-item-info-light'>
