@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import './todoItem.css';
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
-// import { VscChevronUp } from "react-icons/vsc";
-import { VscEdit } from "react-icons/vsc";
-import { VscTrash } from "react-icons/vsc";
+import { VscChevronDown, VscChevronUp, VscEdit, VscTrash } from "react-icons/vsc";
 import TodoModal from '../TodoModal'; 
+import { useDispatch } from 'react-redux';
+import { deleteTodo } from '../../Slices/todoSlice';
 
 export default function TodoItem({
   item
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
-
+  const dispatch = useDispatch()
+  
   const {
     title,
     description,
     time,
     color,
+    id,
   } = item;
+  
+  const handleDelete = ()=> {
+    dispatch(deleteTodo(id));
+  }
 
   return (
     <>
@@ -47,7 +52,7 @@ export default function TodoItem({
           <button onClick={()=>setOpenModal(true)}>
             <VscEdit/>
           </button>
-          <button onClick={()=>console.log(description)}>
+          <button onClick={handleDelete}>
             <VscTrash/>
           </button>
         </span>
