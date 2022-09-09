@@ -4,6 +4,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 0.5625em;
+  padding-top: 0.5625em;
 }
 
 .todo-item-info-light {
@@ -22,17 +24,25 @@
   align-items: flex-start;
   color: #000000;
 }
-.todo-item-info-light > div > h4 {
+.todo-item-info-light > div > * {
+  font-size: 0.9em;
+  font-family: "RM Neue";
+  padding: 0;
+  margin-top: -0.19em;
+  margin-bottom: 0.19em;
+  font-weight: normal;
+}
+.todo-item-info-light > div :first-child {
   font-size: 1.125em;
   font-family: "RM Neue";
+  padding: 0;
+  margin: 0;
 }
-.todo-item-info-light > div > h5 {
-  font-size: 0.875em;
-  font-family: "RM Neue";
-}
-.todo-item-info-light > div > h6 {
-  font-size: 0.875em;
+.todo-item-info-light > div :last-child {
+  font-size: 0.75em;
   font-family: "Fira Mono", monospace;
+  padding: 0;
+  margin: 0;
 }
 
 .todo-item-controls {

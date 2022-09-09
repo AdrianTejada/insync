@@ -29,24 +29,67 @@
 .color-select-light > div > input:checked + label {
   border: 2px solid #000000;
 }
+.color-select-light > div > .gradient-0 {
+  background-color: #F3F3F3;
+}
 .color-select-light > div > label {
   width: 1.25em;
   height: 1.25em;
   border-radius: 1em;
   display: inline-block;
   margin-right: 0.5em;
-  border: 1px solid gray;
+  border: 1px solid #868686;
+  cursor: pointer;
 }
 .color-select-light > div > label:last-child {
   margin-right: 0;
 }
 
-.selected-light {
-  border: 1px solid #000000;
+.color-select-dark {
+  width: 100%;
+  margin-top: 1.5em;
 }
-
-.selected-dark {
-  border: 1px solid #FFFFFF;
+.color-select-dark > h3 {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #FFFFFF;
+}
+.color-select-dark > input {
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  background-color: #000000;
+  border-bottom: 2px solid #676767;
+  color: #FFFFFF;
+  border-radius: 0px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.color-select-dark > input:focus {
+  outline: none;
+  border-bottom: 2px solid #FFFFFF;
+}
+.color-select-dark > div > input {
+  width: 0;
+  opacity: 0;
+}
+.color-select-dark > div > input:checked + label {
+  border: 2px solid #FFFFFF;
+}
+.color-select-dark > div > .gradient-0 {
+  background-color: #1B1B1B;
+}
+.color-select-dark > div > label {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 1em;
+  display: inline-block;
+  margin-right: 0.5em;
+  border: 1px solid #868686;
+  cursor: pointer;
+}
+.color-select-dark > div > label:last-child {
+  margin-right: 0;
 }
 
 .gradient-1 {
