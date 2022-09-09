@@ -1,3 +1,9 @@
-.appContent {
-  border: 1px solid red;
+.app-content-light {
+  width: 100%;
+}
+.app-content-light > * {
+  border-bottom: 1px solid #A4A4A4;
+}
+.app-content-light :last-child {
+  border: none;
 }/*# sourceMappingURL=appContent.css.map */

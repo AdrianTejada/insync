@@ -1,6 +1,6 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
 
-.appContent {
-    border: 1px solid red;
+.app-content-light {
+    @include appContent(map-get($light, 'gray'));
 }
