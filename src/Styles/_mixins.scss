@@ -229,11 +229,12 @@
 
 @mixin appContent ($border) {
     width: 100%;
-    > * {
+
+    > div.todo-item {
         border-bottom: 1px solid $border;
     }
     
-    :last-child {
+    :last-child.todo-item {
         border:none;
     }
 }

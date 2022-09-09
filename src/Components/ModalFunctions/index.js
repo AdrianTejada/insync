@@ -13,6 +13,7 @@ export default function ModalFunctions({
     onButton1Click=()=>{},
     onButton2Click=()=>{},
     currentColor=()=>{},
+    selectedColor,
 }) {
   return (
     <div className='modal-functions'>
@@ -28,7 +29,7 @@ export default function ModalFunctions({
         >
             description
         </TextField>
-        <ColorSelect currentColor={(color)=>currentColor(color)}/>
+        <ColorSelect currentColor={(color)=>currentColor(color)} selectedColor={selectedColor}/>
         <div className='button-row'>
             <Button onClick={onButton1Click}>
                 {button1Text}
