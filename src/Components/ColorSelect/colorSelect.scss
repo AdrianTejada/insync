@@ -3,15 +3,12 @@
 
 .color-select-light {
     @include modalInput(map-get($global, 'black'), map-get($global, 'white'), map-get($light, 'gray'));
-    @include colorSelect(map-get($global, 'black'), map-get($global, 'gray'))
+    @include colorSelect(map-get($global, 'black'), map-get($light, 'bg'))
 }
 
-.selected-light {
-    border: 1px solid map-get($global, 'black');
-}
-
-.selected-dark {
-    border: 1px solid map-get($global, 'white');
+.color-select-dark {
+    @include modalInput(map-get($global, 'white'), map-get($global, 'black'), map-get($dark, 'gray'));
+    @include colorSelect(map-get($global, 'white'), map-get($dark, 'bg'))
 }
 
 @each $key, $val in $gradient {

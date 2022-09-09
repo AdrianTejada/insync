@@ -38,6 +38,7 @@
   margin: 0;
   background-color: none;
   border: none;
+  cursor: pointer;
 }
 .modal-container-light > button > svg {
   position: absolute;
@@ -72,6 +73,7 @@
   margin: 0;
   background-color: none;
   border: none;
+  cursor: pointer;
 }
 .modal-container-dark > button > svg {
   position: absolute;

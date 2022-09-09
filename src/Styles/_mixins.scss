@@ -152,6 +152,7 @@
         margin: 0;
         background-color: none;
         border: none;
+        cursor: pointer;
 
         > svg {
             position: absolute;
@@ -161,7 +162,6 @@
             font-size: 1.8em;
         }
     }
-    // width: 98%;
 }
 
 
@@ -203,6 +203,7 @@
             opacity: 0;
             &:checked + label{
                 border: 2px solid $border;
+                background-color: $bg;
             }
         }
 
