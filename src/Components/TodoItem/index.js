@@ -28,9 +28,15 @@ export default function TodoItem({
         </div>
       </span>
       <span className='todo-item-controls'>
-        <VscChevronDown/>
-        <VscEdit/>
-        <VscTrash/>
+        <button>
+          <VscChevronDown className='chevron'/>
+        </button>
+        <button>
+          <VscEdit/>
+        </button>
+        <button>
+          <VscTrash/>
+        </button>
       </span>
     </div>
   )
