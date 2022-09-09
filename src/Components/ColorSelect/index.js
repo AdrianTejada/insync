@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './colorSelect.css';
+import { useSelector } from 'react-redux';
 
 export default function ColorSelect({
     selectedColor='0',
@@ -7,6 +8,7 @@ export default function ColorSelect({
 }) {
     const colorArr = ['0', '1', '2', '3', '4', '5'];
     const [color, setColor] = useState(selectedColor)
+    const theme = useSelector((state)=>state.theme.todoTheme);
 
     const handleChange = (color) => {
         setColor(color);
@@ -14,7 +16,7 @@ export default function ColorSelect({
     }
 
   return (
-    <div className='color-select-light'>
+    <div className={`color-select-${theme}`}>
         <h3>
             colors
         </h3>

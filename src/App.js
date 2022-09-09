@@ -5,9 +5,11 @@ import AppContent from './Components/AppContent';
 import TodoModal from './Components/TodoModal';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux';
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
+  const theme = useSelector((state)=>state.theme.todoTheme);
   // const [aboutModal, setAboutModal] = useState(false);
 
   return (
@@ -18,7 +20,7 @@ function App() {
         setOpenModal={setOpenModal}
         type='new'
       />
-      <div className='app-base-light'>
+      <div className={`app-base-${theme}`}>
         <div className='layout'>
           <Title>Todo List</Title>
           <div>

@@ -3,4 +3,8 @@
 
 .app-content-light {
     @include appContent(map-get($light, 'gray'));
+
+}
+.app-content-dark {
+    @include appContent(map-get($dark, 'gray'));
 }
