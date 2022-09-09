@@ -2,6 +2,7 @@
   color: #000000;
   padding: 0px;
   margin: 0px;
+  font-weight: normal;
 }
 @media (min-width: 0) {
   .title-main-light > h1 {
@@ -25,6 +26,7 @@
   color: #FFFFFF;
   padding: 0px;
   margin: 0px;
+  font-weight: normal;
 }
 @media (min-width: 0) {
   .title-main-dark > h1 {
@@ -48,6 +50,7 @@
   color: #000000;
   padding: 0px;
   margin: 0px;
+  font-weight: normal;
 }
 @media (min-width: 0) {
   .title-secondary-light > h1 {
@@ -71,6 +74,7 @@
   color: #FFFFFF;
   padding: 0px;
   margin: 0px;
+  font-weight: normal;
 }
 @media (min-width: 0) {
   .title-secondary-dark > h1 {

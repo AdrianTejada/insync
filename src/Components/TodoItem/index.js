@@ -22,9 +22,9 @@ export default function TodoItem({
       <span className='todo-item-info-light'>
         <button/>
         <div>
-          <h4>{title}</h4>
-          <h5>{description}</h5>
-          <h6>{time}</h6>
+          <p>{title}</p>
+          <p>{description}</p>
+          <p>{time}</p>
         </div>
       </span>
       <span className='todo-item-controls'>

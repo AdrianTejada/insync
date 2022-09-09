@@ -28,6 +28,8 @@
 }
 .color-select-light > div > input:checked + label {
   border: 2px solid #000000;
+}
+.color-select-light > div > .gradient-0 {
   background-color: #F3F3F3;
 }
 .color-select-light > div > label {
@@ -36,7 +38,8 @@
   border-radius: 1em;
   display: inline-block;
   margin-right: 0.5em;
-  border: 1px solid gray;
+  border: 1px solid #868686;
+  cursor: pointer;
 }
 .color-select-light > div > label:last-child {
   margin-right: 0;
@@ -72,6 +75,8 @@
 }
 .color-select-dark > div > input:checked + label {
   border: 2px solid #FFFFFF;
+}
+.color-select-dark > div > .gradient-0 {
   background-color: #1B1B1B;
 }
 .color-select-dark > div > label {
@@ -80,7 +85,8 @@
   border-radius: 1em;
   display: inline-block;
   margin-right: 0.5em;
-  border: 1px solid gray;
+  border: 1px solid #868686;
+  cursor: pointer;
 }
 .color-select-dark > div > label:last-child {
   margin-right: 0;
