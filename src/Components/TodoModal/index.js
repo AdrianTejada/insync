@@ -15,7 +15,7 @@ export default function TodoModal({
   id,
   selectedColor,
   status,
-  time,
+  time
 }) {
   const [title, setTitle] = useState(currentTitle);
   const [descript, setDescript] = useState(currentDescript);
@@ -60,7 +60,7 @@ export default function TodoModal({
     }
   };
 
-  return (<div>
+  return (<>
       {openModal && (
         <ModalWrapper title={type === 'new' ? 'New Todo' : 'Edit Todo' } onClose={()=>setOpenModal(false)}>
         <ModalFunctions
@@ -75,5 +75,5 @@ export default function TodoModal({
           selectedColor={color}
         />
       </ModalWrapper>)}
-  </div>)
+  </>)
 }

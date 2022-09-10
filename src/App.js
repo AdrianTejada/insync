@@ -3,21 +3,26 @@ import Title from './Components/Title';
 import Functions from './Components/Functions';
 import AppContent from './Components/AppContent';
 import TodoModal from './Components/TodoModal';
+import AboutModal from './Components/AboutModal';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const [openModal, setOpenModal] = useState(false);
+  const [todoModal, setTodoModal] = useState(false);
+  const [aboutModal, setAboutModal] = useState(false);
   const theme = useSelector((state)=>state.theme.todoTheme);
-  // const [aboutModal, setAboutModal] = useState(false);
 
   return (
     <>
       <Toaster/>
+      <AboutModal
+        openModal={aboutModal}
+        setOpenModal={setAboutModal}
+      />
       <TodoModal
-        openModal={openModal}
-        setOpenModal={setOpenModal}
+        openModal={todoModal}
+        setOpenModal={setTodoModal}
         type='new'
       />
       <div className={`app-base-${theme}`}>
@@ -25,7 +30,8 @@ function App() {
           <Title>Todo List</Title>
           <div>
             <Functions
-              onTodoClick={()=>setOpenModal(true)}
+              onTodoClick={()=>setTodoModal(true)}
+              onAboutClick={()=>setAboutModal(true)}
             />
             <AppContent/>
           </div>
