@@ -1,0 +1,10 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.about-light {
+    @include about (map-get($global, 'black'))
+}
+
+.about-dark {
+    @include about (map-get($global, 'white'))
+}

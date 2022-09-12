@@ -282,3 +282,36 @@
         }
     }
 }
+
+@mixin about ($color) {
+    widht: 100%;
+    margin-top: 1.125em;
+
+    > p,a {
+        font-size: 1em;
+        margin-top: 1em;
+        color: $color;
+    }
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1.5em;
+
+        :first-child {
+            border: none;
+            background-color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: .6em;
+            cursor: pointer;
+
+            > svg {
+                color: $color;
+                font-size: 2.8em;
+            }
+        }
+    }
+}
