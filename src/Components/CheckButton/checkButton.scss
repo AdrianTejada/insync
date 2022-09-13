@@ -1,0 +1,18 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.check-button-light-unchecked {
+    @include checkButton (map-get($light, 'gray'), map-get($light, 'gray'),);
+}
+
+.check-button-dark-unchecked {
+    @include checkButton (map-get($dark, 'gray'), map-get($dark, 'gray'));
+}
+
+.check-button-light-checked {
+    @include checkButton (map-get($global, 'black'), map-get($global, 'white'));
+}
+
+.check-button-dark-checked {
+    @include checkButton (map-get($global, 'white'), map-get($global, 'black'));
+}

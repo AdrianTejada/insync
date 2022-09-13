@@ -1,0 +1,95 @@
+.check-button-light-unchecked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2em;
+  width: 1.5625em;
+  height: 1.5625em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0.3125em;
+  cursor: pointer;
+  background-color: #A4A4A4;
+  transition: background-color 1s ease;
+}
+.check-button-light-unchecked > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #A4A4A4;
+  transition: stroke 0.1s ease;
+}
+
+.check-button-dark-unchecked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2em;
+  width: 1.5625em;
+  height: 1.5625em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0.3125em;
+  cursor: pointer;
+  background-color: #676767;
+  transition: background-color 1s ease;
+}
+.check-button-dark-unchecked > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #676767;
+  transition: stroke 0.1s ease;
+}
+
+.check-button-light-checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2em;
+  width: 1.5625em;
+  height: 1.5625em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0.3125em;
+  cursor: pointer;
+  background-color: #000000;
+  transition: background-color 1s ease;
+}
+.check-button-light-checked > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #FFFFFF;
+  transition: stroke 0.1s ease;
+}
+
+.check-button-dark-checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2em;
+  width: 1.5625em;
+  height: 1.5625em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0.3125em;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  transition: background-color 1s ease;
+}
+.check-button-dark-checked > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #000000;
+  transition: stroke 0.1s ease;
+}/*# sourceMappingURL=checkButton.css.map */

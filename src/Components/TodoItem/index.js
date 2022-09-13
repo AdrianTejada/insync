@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './todoItem.css';
 import { VscChevronDown, VscChevronUp, VscEdit, VscTrash } from "react-icons/vsc";
 import TodoModal from '../TodoModal'; 
+import CheckButton from '../CheckButton';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTodo } from '../../Slices/todoSlice';
+import { deleteTodo, updateTodo } from '../../Slices/todoSlice';
 import { toast } from 'react-hot-toast';
 
 export default function TodoItem({
@@ -11,20 +12,23 @@ export default function TodoItem({
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
-  const dispatch = useDispatch()
+  const [checked, setChecked] = useState(false)
+  const dispatch = useDispatch();
   const theme = useSelector((state)=>state.theme.todoTheme);
+
+  useEffect(()=>{
+    if (item.status ==='complete'){
+      setChecked(true)
+    }
+  },[checked, item.status]);
+
+  const handleCheck = () => {
+    setChecked(!checked)
+    dispatch(updateTodo({...item, status: item.status === 'incomplete' ? 'complete' : 'incomplete'}))
+  }
   
-  const {
-    title,
-    description,
-    time,
-    color,
-    id,
-    status,
-  } = item;
-  
-  const handleDelete = ()=> {
-    dispatch(deleteTodo(id));
+  const handleDelete = () => {
+    dispatch(deleteTodo(item.id));
     toast.success('good work!')
   }
 
@@ -34,24 +38,21 @@ export default function TodoItem({
         openModal={openModal}
         setOpenModal={setOpenModal}
         type='edit'
-        selectedColor={color}
-        currentTitle={title}
-        currentDescript={description}
-        id={id}
-        status={status}
-        time={time}
+        item={item}
       />
       <div className='todo-item'>
-        <span className={`todo-item-info-${theme}`}>
-          <button/>
+        <span className={`todo-item-info-${theme}-${item.status}`} onClick={handleCheck}>
+          <CheckButton
+            checked={checked}
+          />
           <div>
-            <p>{title}</p>
-            {expand ? <p>{description}</p> : null}
-            <p>{time}</p>
+            <p>{item.title}</p>
+            {expand ? <p>{item.description}</p> : null}
+            <p>{item.time}</p>
           </div>
         </span>
         <span className='todo-item-controls'>
-          {description ? 
+          {item.description ? 
              <button onClick={()=>setExpand(!expand)}>
               {expand ? <VscChevronUp className='chevron'/> : <VscChevronDown className='chevron'/>}
             </button>

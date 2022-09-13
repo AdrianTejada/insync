@@ -14,13 +14,27 @@
     }
 }
 
-.todo-item-info-light {
+.todo-item-info-light-incomplete {
     @include todoItemInfo (map-get($global, 'black'));
 }
 
-.todo-item-info-dark {
+.todo-item-info-dark-incomplete {
     @include todoItemInfo (map-get($global, 'white'));
 }
+
+.todo-item-info-light-complete {
+    @include todoItemInfo (map-get($light, 'gray'));
+    text-decoration: line-through;
+    text-decoration-color:map-get($light , 'gray'); 
+
+}
+
+.todo-item-info-dark-complete {
+    @include todoItemInfo (map-get($dark, 'gray'));
+    text-decoration: line-through;
+    text-decoration-color:map-get($dark , 'gray');
+}
+
 
 .todo-item-controls {
     display: flex;

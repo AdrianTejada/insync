@@ -1,0 +1,57 @@
+.about-light {
+  widht: 100%;
+  margin-top: 1.125em;
+}
+.about-light > p, .about-light a {
+  font-size: 1em;
+  margin-top: 1em;
+  color: #000000;
+}
+.about-light > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5em;
+}
+.about-light > div :first-child {
+  border: none;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.6em;
+  cursor: pointer;
+}
+.about-light > div :first-child > svg {
+  color: #000000;
+  font-size: 2.8em;
+}
+
+.about-dark {
+  widht: 100%;
+  margin-top: 1.125em;
+}
+.about-dark > p, .about-dark a {
+  font-size: 1em;
+  margin-top: 1em;
+  color: #FFFFFF;
+}
+.about-dark > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5em;
+}
+.about-dark > div :first-child {
+  border: none;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.6em;
+  cursor: pointer;
+}
+.about-dark > div :first-child > svg {
+  color: #FFFFFF;
+  font-size: 2.8em;
+}/*# sourceMappingURL=aboutModal.css.map */

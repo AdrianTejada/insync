@@ -8,23 +8,19 @@
   padding-top: 0.5625em;
 }
 
-.todo-item-info-light {
+.todo-item-info-light-incomplete {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.todo-item-info-light > button {
-  margin: 1.125em;
-  width: 1.25em;
-  height: 1.25em;
-}
-.todo-item-info-light > div {
+.todo-item-info-light-incomplete > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: #000000;
+  transition: color 0.3s ease;
 }
-.todo-item-info-light > div > * {
+.todo-item-info-light-incomplete > div > * {
   font-size: 0.9em;
   font-family: "RM Neue";
   padding: 0;
@@ -32,36 +28,33 @@
   margin-bottom: 0.19em;
   font-weight: normal;
 }
-.todo-item-info-light > div :first-child {
+.todo-item-info-light-incomplete > div :first-child {
   font-size: 1.125em;
   font-family: "RM Neue";
   padding: 0;
   margin: 0;
 }
-.todo-item-info-light > div :last-child {
+.todo-item-info-light-incomplete > div :last-child {
   font-size: 0.75em;
   font-family: "Fira Mono", monospace;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
-.todo-item-info-dark {
+.todo-item-info-dark-incomplete {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.todo-item-info-dark > button {
-  margin: 1.125em;
-  width: 1.25em;
-  height: 1.25em;
-}
-.todo-item-info-dark > div {
+.todo-item-info-dark-incomplete > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: #FFFFFF;
+  transition: color 0.3s ease;
 }
-.todo-item-info-dark > div > * {
+.todo-item-info-dark-incomplete > div > * {
   font-size: 0.9em;
   font-family: "RM Neue";
   padding: 0;
@@ -69,17 +62,92 @@
   margin-bottom: 0.19em;
   font-weight: normal;
 }
-.todo-item-info-dark > div :first-child {
+.todo-item-info-dark-incomplete > div :first-child {
   font-size: 1.125em;
   font-family: "RM Neue";
   padding: 0;
   margin: 0;
 }
-.todo-item-info-dark > div :last-child {
+.todo-item-info-dark-incomplete > div :last-child {
   font-size: 0.75em;
   font-family: "Fira Mono", monospace;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+}
+
+.todo-item-info-light-complete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #A4A4A4;
+          text-decoration-color: #A4A4A4;
+}
+.todo-item-info-light-complete > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #A4A4A4;
+  transition: color 0.3s ease;
+}
+.todo-item-info-light-complete > div > * {
+  font-size: 0.9em;
+  font-family: "RM Neue";
+  padding: 0;
+  margin-top: -0.19em;
+  margin-bottom: 0.19em;
+  font-weight: normal;
+}
+.todo-item-info-light-complete > div :first-child {
+  font-size: 1.125em;
+  font-family: "RM Neue";
+  padding: 0;
+  margin: 0;
+}
+.todo-item-info-light-complete > div :last-child {
+  font-size: 0.75em;
+  font-family: "Fira Mono", monospace;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.todo-item-info-dark-complete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #676767;
+          text-decoration-color: #676767;
+}
+.todo-item-info-dark-complete > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #676767;
+  transition: color 0.3s ease;
+}
+.todo-item-info-dark-complete > div > * {
+  font-size: 0.9em;
+  font-family: "RM Neue";
+  padding: 0;
+  margin-top: -0.19em;
+  margin-bottom: 0.19em;
+  font-weight: normal;
+}
+.todo-item-info-dark-complete > div :first-child {
+  font-size: 1.125em;
+  font-family: "RM Neue";
+  padding: 0;
+  margin: 0;
+}
+.todo-item-info-dark-complete > div :last-child {
+  font-size: 0.75em;
+  font-family: "Fira Mono", monospace;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
 
 .todo-item-controls {

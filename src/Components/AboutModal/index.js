@@ -2,29 +2,37 @@ import React from 'react'
 import ModalWrapper from '../ModalWrapper';
 import Button from '../Button';
 import {VscGithubInverted} from 'react-icons/vsc';
+import { useSelector } from 'react-redux';
+import './aboutModal.css'
 
 export default function AboutModal({
     openModal,
     setOpenModal
 }) {
+  const theme = useSelector((state)=>state.theme.todoTheme);
+
   return ( <>
     {openModal && (
         <ModalWrapper title='About' onClose={()=>setOpenModal(false)}>
-            <div>
+          <div className={`about-${theme}`}>
+            <p>
               A simple todo list app built with React.js, Redux, SCSS and Framer. For the source code & documentation feel free to click on the Github icon below!
-            </div>
-            <div>
+            </p>
+            <p>
               Designed & developed by Adrian Tejada.
-            </div>
-            <a href='https://www.atejada.dev/'>
+            </p>
+            <a target='_blank' href='https://www.atejada.dev/' rel="noopener noreferrer">
               https://www.atejada.dev/
             </a>
             <div>
               <button>
                 <VscGithubInverted/>
               </button>
-              <Button/>
+              <Button>
+                gradientify!
+              </Button>
             </div>
+          </div>
         </ModalWrapper>
     )}
   </>)
