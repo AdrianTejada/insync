@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ModalWrapper from '../ModalWrapper';
 import ModalFunctions from '../ModalFunctions';
 import { useDispatch } from 'react-redux';
@@ -10,18 +10,29 @@ export default function TodoModal({
   type,
   openModal,
   setOpenModal,
-  currentTitle,
-  currentDescript,
-  id,
-  selectedColor,
-  status,
-  time
+  item,
 }) {
-  const [title, setTitle] = useState(currentTitle);
-  const [descript, setDescript] = useState(currentDescript);
-  const [color, setColor] = useState(selectedColor ? selectedColor : '0');
+  const [title, setTitle] = useState();
+  const [descript, setDescript] = useState();
+  const [status, setStatus] = useState();
+  const [color, setColor] = useState('0');
 
   const dispatch = useDispatch();
+
+  useEffect(()=>{
+    if (type === 'edit' && item) {
+      setTitle(item.title)
+      setDescript(item.description)
+      setStatus(item.status)
+      setColor(item.color)
+    } else {
+      setTitle('')
+      setDescript('')
+      setStatus('incomplete')
+      setColor('0')
+    }
+  },[type, item, openModal])
+  // how does this work
 
   const handleSubmit  = () => {
     if (title) {
@@ -41,18 +52,18 @@ export default function TodoModal({
         setColor('0');
         setOpenModal(false);
       }
-      if (type === 'edit') {
+      if (type === 'edit' && (item.title !== title || item.description !== descript || item.color !== color)) {
         dispatch(updateTodo({
-          id,
+          ...item,
           title,
           description: descript,
           color,
-          time,
-          status
         }));
 
         toast.success('updated');
         setOpenModal(false);
+      } else {
+        toast.error('no changes made!')
       }
     } 
     else {
