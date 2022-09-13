@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState }from 'react';
 import Button from '../Button';
 import SelectButton from '../SelectButton';
 import './functions.css';
 import { MdPlaylistAdd } from "react-icons/md";
 import Switch from '../Switch';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateFilter } from '../../Slices/todoSlice';
 
 export default function Functions({
   onTodoClick=()=>{},
   onAboutClick=()=>{},
 }) {
+  const filter = useSelector((state)=>state.todo.todoFilter)
+  const dispatch = useDispatch();
+
+  const handleFilterChange = (event) => {
+    const status = event.target.value;
+    dispatch(updateFilter(status));
+  };
+
   return (
     <div className='functions'>
        <div>
@@ -18,7 +28,7 @@ export default function Functions({
         <Switch/>
        </div>
        <div>
-          <SelectButton>
+          <SelectButton onChange={(event)=>handleFilterChange(event)} value={filter}>
             <option value='all'>all items</option>
             <option value='incomplete'>incomplete</option>
             <option value='complete'>complete</option>

@@ -19,15 +19,17 @@ const checkVariants = {
 
 
 export default function CheckButton({
-  checked
+  checked,
+  onClick,
 }) {
   const theme = useSelector((state)=>state.theme.todoTheme);
 
   return (
     <motion.div className={`check-button-${theme}-${checked ? 'checked' : 'unchecked'}`}
     animate={checked ? 'checked' : 'unchecked'}
+    onClick={onClick}
     >
-        <motion.svg
+        <svg
             viewBox='0 0 53 38'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -42,7 +44,7 @@ export default function CheckButton({
                 strokeLinejoin='round'
                 strokeLinecap='round'
                 />
-        </motion.svg>
+        </svg>
     </motion.div>
   )
 }
