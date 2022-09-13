@@ -9,8 +9,19 @@ const getInitialTodo = () => {
     return [];
 };
 
+const getIntialTheme = () => {
+    const theme = window.localStorage.getItem('todoTheme');
+    if (theme) {
+        return theme
+    }
+    window.localStorage.setItem('todoTheme', 'light');
+    return 'light'
+};
+
 const initialValue = {
-    todoList: getInitialTodo()
+    todoList: getInitialTodo(),
+    todoFilter: 'all',
+    todoTheme: getIntialTheme()
 };
 
 export const todoSlice = createSlice({
@@ -55,9 +66,21 @@ export const todoSlice = createSlice({
                 window.localStorage.setItem('todoList', JSON.stringify(todoListArr))
                 state.todoList = todoListArr;
             }
+        },
+        updateFilter: (state, action) => {
+            state.todoFilter = action.payload;
+        },
+        updateTheme: (state, action) => {
+            if (action.payload === 'light') {
+                window.localStorage.setItem('todoTheme', 'dark')
+                state.todoTheme = 'dark';
+            } else {
+                window.localStorage.setItem('todoTheme', 'light')
+                state.todoTheme = 'light';
+            }
         }
     }
 });
 
-export const { addTodo, deleteTodo, updateTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme } = todoSlice.actions;
 export default todoSlice.reducer;

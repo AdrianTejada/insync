@@ -41,9 +41,10 @@ export default function TodoItem({
         item={item}
       />
       <div className='todo-item'>
-        <span className={`todo-item-info-${theme}-${item.status}`} onClick={handleCheck}>
+        <span className={`todo-item-info-${theme}-${item.status}`}>
           <CheckButton
             checked={checked}
+            onClick={handleCheck}
           />
           <div>
             <p>{item.title}</p>

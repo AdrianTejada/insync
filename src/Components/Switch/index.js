@@ -12,10 +12,7 @@ export default function Switch() {
   const dispatch = useDispatch();
 
   return (
-    <div className={`switch-${theme}`} onClick={()=>{
-      dispatch(updateTheme(theme))
-      console.log(theme)
-      }}>
+    <div className={`switch-${theme}`} onClick={()=>dispatch(updateTheme(theme))}>
       <div/>
       <button>
         {theme === 'light' ? <TbNorthStar/> : <BsFillMoonStarsFill/>}
