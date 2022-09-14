@@ -14,7 +14,6 @@ export default function TodoModal({
 }) {
   const [title, setTitle] = useState();
   const [descript, setDescript] = useState();
-  const [status, setStatus] = useState();
   const [color, setColor] = useState('0');
 
   const dispatch = useDispatch();
@@ -23,12 +22,10 @@ export default function TodoModal({
     if (type === 'edit' && item) {
       setTitle(item.title)
       setDescript(item.description)
-      setStatus(item.status)
       setColor(item.color)
     } else {
       setTitle('')
       setDescript('')
-      setStatus('incomplete')
       setColor('0')
     }
   },[type, item, openModal])

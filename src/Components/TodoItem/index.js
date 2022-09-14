@@ -6,9 +6,11 @@ import CheckButton from '../CheckButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo, updateTodo } from '../../Slices/todoSlice';
 import { toast } from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
 export default function TodoItem({
-  item
+  item,
+  variants
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
@@ -40,7 +42,7 @@ export default function TodoItem({
         type='edit'
         item={item}
       />
-      <div className='todo-item'>
+      <motion.div className='todo-item' variants={variants}>
         <span className={`todo-item-info-${theme}-${item.status}`}>
           <CheckButton
             checked={checked}
@@ -65,7 +67,7 @@ export default function TodoItem({
             <VscTrash/>
           </button>
         </span>
-      </div>
+      </motion.div>
     </>
   )
 }
