@@ -8,7 +8,7 @@ export default function Button({
   type='button',
   onClick=()=>{},
 }) {
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   return (
     <button className={`button-${variant}-${theme}`} type={type} onClick={onClick}>

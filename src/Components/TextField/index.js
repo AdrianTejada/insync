@@ -7,7 +7,7 @@ export default function TextField({
   value,
   onChange=()=>{}
 }) {
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   return (
     <div className={`text-field-${theme}`} >

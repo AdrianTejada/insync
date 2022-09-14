@@ -16,7 +16,7 @@ export default function TodoItem({
   const [expand, setExpand] = useState(false);
   const [checked, setChecked] = useState(false)
   const dispatch = useDispatch();
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   useEffect(()=>{
     if (item.status ==='complete'){

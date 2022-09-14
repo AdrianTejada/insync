@@ -22,27 +22,29 @@
   outline: none;
   border-bottom: 2px solid #000000;
 }
-.color-select-light > div > input {
+.color-select-light > div > span {
+  margin-right: 0.5em;
+}
+.color-select-light > div > span:last-child {
+  margin-right: 0;
+}
+.color-select-light > div > span > input {
   width: 0;
   opacity: 0;
 }
-.color-select-light > div > input:checked + label {
+.color-select-light > div > span > input:checked + label {
   border: 2px solid #000000;
 }
-.color-select-light > div > .gradient-0 {
+.color-select-light > div > span > .gradient-0 {
   background-color: #F3F3F3;
 }
-.color-select-light > div > label {
+.color-select-light > div > span > label {
   width: 1.25em;
   height: 1.25em;
   border-radius: 1em;
   display: inline-block;
-  margin-right: 0.5em;
   border: 1px solid #868686;
   cursor: pointer;
-}
-.color-select-light > div > label:last-child {
-  margin-right: 0;
 }
 
 .color-select-dark {
@@ -69,27 +71,29 @@
   outline: none;
   border-bottom: 2px solid #FFFFFF;
 }
-.color-select-dark > div > input {
+.color-select-dark > div > span {
+  margin-right: 0.5em;
+}
+.color-select-dark > div > span:last-child {
+  margin-right: 0;
+}
+.color-select-dark > div > span > input {
   width: 0;
   opacity: 0;
 }
-.color-select-dark > div > input:checked + label {
+.color-select-dark > div > span > input:checked + label {
   border: 2px solid #FFFFFF;
 }
-.color-select-dark > div > .gradient-0 {
+.color-select-dark > div > span > .gradient-0 {
   background-color: #1B1B1B;
 }
-.color-select-dark > div > label {
+.color-select-dark > div > span > label {
   width: 1.25em;
   height: 1.25em;
   border-radius: 1em;
   display: inline-block;
-  margin-right: 0.5em;
   border: 1px solid #868686;
   cursor: pointer;
-}
-.color-select-dark > div > label:last-child {
-  margin-right: 0;
 }
 
 .gradient-1 {
