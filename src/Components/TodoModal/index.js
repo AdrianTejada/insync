@@ -16,21 +16,8 @@ export default function TodoModal({
   const [title, setTitle] = useState();
   const [descript, setDescript] = useState();
   const [color, setColor] = useState('0');
-
+  
   const dispatch = useDispatch();
-
-  useEffect(()=>{
-    if (type === 'edit' && item) {
-      setTitle(item.title)
-      setDescript(item.description)
-      setColor(item.color)
-    } else {
-      setTitle('')
-      setDescript('')
-      setColor('0')
-    }
-  },[type, item, openModal])
-  // how does this work
 
   const handleSubmit  = () => {
     if (title) {
@@ -43,21 +30,21 @@ export default function TodoModal({
           time: new Date().toLocaleString(),
           status: 'incomplete',
         }));
-
+  
         toast.success('added new todo!');
         setTitle(null);
         setDescript(null);
         setColor('0');
         setOpenModal(false);
       }
-      if (type === 'edit' && (item.title !== title || item.description !== descript || item.color !== color)) {
+      else if (type === 'edit' && (item.title !== title || item.description !== descript || item.color !== color)) {
         dispatch(updateTodo({
           ...item,
           title,
           description: descript,
           color,
         }));
-
+  
         toast.success('updated');
         setOpenModal(false);
       } else {
@@ -68,6 +55,21 @@ export default function TodoModal({
       toast.error('title is empty');
     }
   };
+  
+  useEffect(()=>{
+    if (type === 'edit' && item) {
+      setTitle(item.title)
+      setDescript(item.description)
+      setColor(item.color)
+    } else {
+      setTitle('')
+      setDescript('')
+      setColor('0')
+    }
+
+  },[type, item, openModal])
+  // how does this work
+
 
   return (<AnimatePresence>
       {openModal && (
