@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './todoItem.css';
-import { VscChevronDown, VscChevronUp, VscEdit, VscTrash } from "react-icons/vsc";
+import { VscChevronDown, VscEdit, VscTrash } from "react-icons/vsc";
 import TodoModal from '../TodoModal'; 
 import CheckButton from '../CheckButton';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,9 +8,41 @@ import { deleteTodo, updateTodo } from '../../Slices/todoSlice';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
+const expandIcon = {
+  expand: { 
+    rotate: 0, 
+    transition: {
+      type: 'tween',
+      duration: .1
+    }
+  },
+  close: { 
+    rotate: 90,
+    transition: {
+      type: 'tween',
+      duration: .1
+    }
+  }
+};
+
+const expandDescription = {
+  expand: {
+    height: 0,
+    opacity: 0,
+      transition: {
+      type: 'tween',
+      duration: .1
+    }
+  },
+  close: {
+    height: '.9em',
+    opacity: 1,
+  }
+};
+
 export default function TodoItem({
   item,
-  variants
+  variants,
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
@@ -42,7 +74,7 @@ export default function TodoItem({
         type='edit'
         item={item}
       />
-      <motion.div className='todo-item' variants={variants}>
+      <motion.div className='todo-item' variants={variants} exit='exit' animate='visible' initial='hidden'>
         <span className={`todo-item-info-${theme}-${item.status}`}>
           <CheckButton
             checked={checked}
@@ -50,15 +82,25 @@ export default function TodoItem({
           />
           <div>
             <p>{item.title}</p>
-            {expand ? <p>{item.description}</p> : null}
+            <motion.p 
+              variants={expandDescription} 
+              animate={expand ? 'close' : 'expand'}
+              transition={{opacity: {duration: .2, delay: .2},default: {duration: .2}}}
+            >
+              {item.description}
+            </motion.p>
             <p>{item.time}</p>
           </div>
         </span>
         <span className='todo-item-controls'>
           {item.description ? 
-             <button onClick={()=>setExpand(!expand)}>
-              {expand ? <VscChevronUp className='chevron'/> : <VscChevronDown className='chevron'/>}
-            </button>
+             <motion.button 
+              onClick={()=>setExpand(!expand)}
+              variants={expandIcon}
+              animate={expand ? 'close' : 'expand'}
+             >
+              <VscChevronDown className='chevron'/>
+            </motion.button>
           : null}
           <button onClick={()=>setOpenModal(true)}>
             <VscEdit/>

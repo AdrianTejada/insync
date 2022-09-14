@@ -17,10 +17,8 @@ const container = {
 
 const child = {
   hidden: {y: 20, opacity : 0},
-  visible: {
-    y: 0,
-    opacity: 1
-  }
+  visible: {y: 0,opacity: 1},
+  exit: {opacity: 0, x: -20}
 }
 
 export default function AppContent() {
@@ -44,7 +42,9 @@ export default function AppContent() {
       initial='hidden'
       animate='visible'
     >
-      <AnimatePresence>
+      <AnimatePresence 
+      // mode='popLayout'
+      >
         {filteredTodoList && filteredTodoList.length > 0
         ? filteredTodoList.map((item)=><TodoItem 
         key={item.id}
