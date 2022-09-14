@@ -29,13 +29,17 @@ const expandDescription = {
   expand: {
     height: 0,
     opacity: 0,
+    marginTop: 0,
+    marginBottom: 0,
       transition: {
       type: 'tween',
-      duration: .1
+      duration: .15
     }
   },
   close: {
-    height: '.9em',
+    height: '1em',
+    marginTop: '-.3em',
+    marginBottom: '.4em',
     opacity: 1,
   }
 };
