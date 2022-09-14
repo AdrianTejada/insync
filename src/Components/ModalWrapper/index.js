@@ -6,9 +6,27 @@ import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 
 const appear = {
-  hidden : {opacity: 0},
-  visible: {opacity: 1},
-  exit: {opacity: 0}
+  hidden : {
+    opacity: 0,
+    transition: {
+      type: 'tween',
+      duration: .3
+    }
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'tween',
+      duration: .3
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      type: 'tween',
+      duration: .1
+    }
+  }
 }
 
 export default function ModalWrapper({

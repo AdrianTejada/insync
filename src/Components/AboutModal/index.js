@@ -4,6 +4,7 @@ import Button from '../Button';
 import {VscGithubInverted} from 'react-icons/vsc';
 import { useSelector } from 'react-redux';
 import './aboutModal.css'
+import { AnimatePresence } from 'framer-motion';
 
 export default function AboutModal({
     openModal,
@@ -11,7 +12,7 @@ export default function AboutModal({
 }) {
   const theme = useSelector((state)=>state.todo.todoTheme);
 
-  return ( <>
+  return ( <AnimatePresence>
     {openModal && (
         <ModalWrapper title='About' onClose={()=>setOpenModal(false)}>
           <div className={`about-${theme}`}>
@@ -35,5 +36,5 @@ export default function AboutModal({
           </div>
         </ModalWrapper>
     )}
-  </>)
+  </AnimatePresence>)
 }
