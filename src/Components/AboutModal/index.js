@@ -9,7 +9,7 @@ export default function AboutModal({
     openModal,
     setOpenModal
 }) {
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   return ( <>
     {openModal && (

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const appear = {
   hidden : {opacity: 0},
   visible: {opacity: 1},
-  exit: {opacity: 1}
+  exit: {opacity: 0}
 }
 
 export default function ModalWrapper({

@@ -8,7 +8,7 @@ export default function ColorSelect({
 }) {
     const colorArr = ['0', '1', '2', '3', '4', '5'];
     const [color, setColor] = useState(selectedColor)
-    const theme = useSelector((state)=>state.theme.todoTheme);
+    const theme = useSelector((state)=>state.todo.todoTheme);
 
     const handleChange = (color) => {
         setColor(color);
@@ -21,10 +21,10 @@ export default function ColorSelect({
             colors
         </h3>
         <div>
-            {colorArr.map((value)=><>
+            {colorArr.map((value)=><span key={value}>
                 <input type='radio' value={value} checked={color === value} name={value} readOnly/>
                 <label htmlFor={value} onClick={()=>handleChange(value)} className={`gradient-${value}`}/>
-            </>)}
+            </span>)}
         </div>
     </div>
   )

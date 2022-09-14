@@ -3,12 +3,12 @@ import './switch.css';
 import { TbNorthStar } from "react-icons/tb";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useSelector, useDispatch } from 'react-redux';
-import { updateTheme } from '../../Slices/themeSlice';
+import { updateTheme } from '../../Slices/todoSlice';
 
 
 
 export default function Switch() {
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
   const dispatch = useDispatch();
 
   return (

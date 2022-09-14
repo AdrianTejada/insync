@@ -25,7 +25,7 @@ const child = {
 
 export default function AppContent() {
   const todoList = useSelector((state) => state.todo.todoList);
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
   const filter = useSelector((state)=>state.todo.todoFilter)
   const sortedTodoList = [...todoList];
 

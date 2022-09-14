@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addTodo, updateTodo } from '../../Slices/todoSlice'; 
 import {v4 as uuid} from 'uuid';
 import toast from 'react-hot-toast';
+import { AnimatePresence } from 'framer-motion';
 
 export default function TodoModal({
   type,
@@ -68,7 +69,7 @@ export default function TodoModal({
     }
   };
 
-  return (<>
+  return (<AnimatePresence>
       {openModal && (
         <ModalWrapper title={type === 'new' ? 'New Todo' : 'Edit Todo' } onClose={()=>setOpenModal(false)}>
         <ModalFunctions
@@ -83,5 +84,5 @@ export default function TodoModal({
           selectedColor={color}
         />
       </ModalWrapper>)}
-  </>)
+  </AnimatePresence>)
 }

@@ -22,7 +22,7 @@ export default function CheckButton({
   checked,
   onClick,
 }) {
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   return (
     <motion.div className={`check-button-${theme}-${checked ? 'checked' : 'unchecked'}`}

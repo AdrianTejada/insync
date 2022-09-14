@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 function App() {
   const [todoModal, setTodoModal] = useState(false);
   const [aboutModal, setAboutModal] = useState(false);
-  const theme = useSelector((state)=>state.theme.todoTheme);
+  const theme = useSelector((state)=>state.todo.todoTheme);
 
   return (
     <>
