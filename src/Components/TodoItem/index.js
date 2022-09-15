@@ -26,6 +26,12 @@ const expandIcon = {
 };
 
 const expandDescription = {
+  close: {
+    height: '1em',
+    marginTop: '-.3em',
+    marginBottom: '.4em',
+    opacity: 1,
+  },
   expand: {
     height: 0,
     opacity: 0,
@@ -36,17 +42,10 @@ const expandDescription = {
       duration: .15
     }
   },
-  close: {
-    height: '1em',
-    marginTop: '-.3em',
-    marginBottom: '.4em',
-    opacity: 1,
-  }
 };
 
 export default function TodoItem({
-  item,
-  variants,
+  item
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [expand, setExpand] = useState(false);
@@ -89,6 +88,7 @@ export default function TodoItem({
             <motion.p 
               variants={expandDescription} 
               animate={expand ? 'close' : 'expand'}
+              initial='expand'
               transition={{opacity: {duration: .2, delay: .2},default: {duration: .2}}}
             >
               {item.description}
