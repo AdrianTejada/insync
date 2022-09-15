@@ -78,7 +78,7 @@ export default function TodoItem({
         type='edit'
         item={item}
       />
-      <motion.div className='todo-item' variants={variants} exit='exit' animate='visible' initial='hidden'>
+      <div className='todo-item'>
         <span className={`todo-item-info-${theme}-${item.status}`}>
           <CheckButton
             checked={checked}
@@ -113,7 +113,7 @@ export default function TodoItem({
             <VscTrash/>
           </button>
         </span>
-      </motion.div>
+      </div>
     </>
   )
 }
