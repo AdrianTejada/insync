@@ -11,6 +11,7 @@
   padding: 0;
   -webkit-tap-highlight-color: transparent;
   font-family: "RM Neue";
+  transition: background-color 0.3s ease;
 }
 
 body {

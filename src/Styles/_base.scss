@@ -6,6 +6,7 @@
   padding: 0;
   -webkit-tap-highlight-color:transparent;
   font-family: $mainFont;
+  transition: background-color .3s ease;
 }
 
 body {
@@ -42,3 +43,4 @@ body {
     padding: 2.3em;
   }
 }
+

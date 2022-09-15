@@ -1,19 +1,10 @@
 import React from 'react';
 import './appContent.css';
 import TodoItem from '../TodoItem';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteCompleted } from '../../Slices/todoSlice';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const container = {
-  hidden: {opacity: 1},
-  visible: {
-    opacity: 1,
-    scale: 1, 
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-}
+import Button from '../Button';
 
 const child = {
   hidden: {
@@ -39,12 +30,39 @@ const child = {
       duration: .2
     }
   }
-}
+};
+
+const noTodos = {
+  hidden: {
+    y: 0,
+    opacity : 0,
+    scale: 1
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'tween',
+      duration: .4,
+      ease: 'easeOut'
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: {
+      type: 'tween',
+      duration: .2
+    }
+  }
+};
 
 export default function AppContent() {
   const todoList = useSelector((state) => state.todo.todoList);
   const theme = useSelector((state)=>state.todo.todoTheme);
   const filter = useSelector((state)=>state.todo.todoFilter)
+  const dispatch = useDispatch();
   const sortedTodoList = [...todoList];
 
   sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
@@ -56,23 +74,24 @@ export default function AppContent() {
       return item.status === filter;
     }
   })
-  return (
-    <motion.div 
-      variants={container}
-      initial='hidden'
-      animate='visible'
-      className={`app-content-${theme}`}
-    >
-      <AnimatePresence mode='popLayout'>
-        {filteredTodoList && filteredTodoList.length > 0
-        ? filteredTodoList.map((item)=><motion.div layout variants={child} initial='hidden' animate='visible' exit='exit' key={item.id}>
-          <TodoItem item={item}/>
-          </motion.div>
-        ): <motion.div
-        layout
-        variants={child}
-        >no todos!</motion.div>}
-      </AnimatePresence>
-    </motion.div>
+  return ( 
+    <>
+      <div className={`app-content-${theme}`}>
+        <AnimatePresence mode='popLayout'>
+          {filteredTodoList && filteredTodoList.length > 0 ? 
+          filteredTodoList.map((item)=> <motion.div layout variants={child} initial='hidden' animate='visible' exit='exit' key={item.id}>
+              <TodoItem item={item}/>
+            </motion.div>)
+          : null }
+        </AnimatePresence>
+      </div>
+      {(filteredTodoList.every((item)=>item.status === 'complete') && filteredTodoList.length > 0) && 
+        <div>
+          <Button onClick={()=>dispatch(deleteCompleted())}>
+            clear all!
+          </Button>
+        </div>
+      }
+    </>
   )
 }
