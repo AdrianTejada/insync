@@ -78,9 +78,23 @@ export const todoSlice = createSlice({
                 window.localStorage.setItem('todoTheme', 'light')
                 state.todoTheme = 'light';
             }
+        },
+        deleteCompleted: (state, action) => {
+            const todoList = window.localStorage.getItem('todoList');
+            if (todoList) {
+                const todoListArr = JSON.parse(todoList);
+
+                const filteredTodoList = todoListArr.filter((item)=>{
+                      return item.status === 'incomplete';
+                })
+
+
+                window.localStorage.setItem('todoList', JSON.stringify(filteredTodoList));
+                state.todoList = filteredTodoList;
+            }
         }
     }
 });
 
-export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme, deleteCompleted } = todoSlice.actions;
 export default todoSlice.reducer;
