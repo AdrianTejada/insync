@@ -16,9 +16,29 @@ const container = {
 }
 
 const child = {
-  hidden: {y: 20, opacity : 0},
-  visible: {y: 0,opacity: 1},
-  exit: {opacity: 0, x: -20}
+  hidden: {
+    y: 30,
+    opacity : 0,
+    scale: 1
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'tween',
+      duration: .4,
+      ease: 'easeOut'
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.95,
+    transition: {
+      type: 'tween',
+      duration: .2
+    }
+  }
 }
 
 export default function AppContent() {
@@ -37,21 +57,19 @@ export default function AppContent() {
     }
   })
   return (
-    <motion.div className={`app-content-${theme}`}
+    <motion.div 
       variants={container}
       initial='hidden'
       animate='visible'
+      className={`app-content-${theme}`}
     >
-      <AnimatePresence 
-      // mode='popLayout'
-      >
+      <AnimatePresence mode='popLayout'>
         {filteredTodoList && filteredTodoList.length > 0
-        ? filteredTodoList.map((item)=><TodoItem 
-        key={item.id}
-        item={item}
-        variants={child}
-        />
+        ? filteredTodoList.map((item)=><motion.div layout variants={child} initial='hidden' animate='visible' exit='exit' key={item.id}>
+          <TodoItem item={item}/>
+          </motion.div>
         ): <motion.div
+        layout
         variants={child}
         >no todos!</motion.div>}
       </AnimatePresence>
