@@ -8,19 +8,25 @@ import { deleteTodo, updateTodo } from '../../Slices/todoSlice';
 import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
+const tap = {
+  scale: 0.9
+}
+
 const expandIcon = {
   expand: { 
     rotate: 0, 
     transition: {
-      type: 'tween',
-      duration: .1
+      type: 'spring',
+      duration: .3,
+      bounce: .4
     }
   },
   close: { 
     rotate: 90,
     transition: {
-      type: 'tween',
-      duration: .1
+      type: 'spring',
+      duration: .3,
+      bounce: .4
     }
   }
 };
@@ -102,16 +108,17 @@ export default function TodoItem({
               onClick={()=>setExpand(!expand)}
               variants={expandIcon}
               animate={expand ? 'close' : 'expand'}
+              whileTap={tap}
              >
               <VscChevronDown className='chevron'/>
             </motion.button>
           : null}
-          <button onClick={()=>setOpenModal(true)}>
+          <motion.button onClick={()=>setOpenModal(true)} whileTap={tap}>
             <VscEdit/>
-          </button>
-          <button onClick={handleDelete}>
+          </motion.button>
+          <motion.button whileTap={tap} onClick={handleDelete}>
             <VscTrash/>
-          </button>
+          </motion.button>
         </span>
       </div>
     </>

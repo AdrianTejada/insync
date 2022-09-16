@@ -1,13 +1,18 @@
 import React from 'react';
 import '../Button/button.css';
 import { useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
+
+const tap = {
+  scale: 0.95
+}
 
 export default function SelectButton ({children, onChange, value}) {
   const theme = useSelector((state)=>state.todo.todoTheme);
-  
+
     return (
-      <select className={`button-secondary-${theme}`} onChange={(event)=>onChange(event)} value={value}>
+      <motion.select whileTap={tap} className={`button-secondary-${theme}`} onChange={(event)=>onChange(event)} value={value}>
         {children}
-      </select>
+      </motion.select>
     )
 }

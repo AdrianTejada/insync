@@ -18,4 +18,40 @@
 }
 .app-content-dark :last-child > div.todo-item {
   border: none;
+}
+
+.clear-todos-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clear-todos-light > button {
+  border: 1px solid #000000;
+  height: 3em;
+  color: #000000;
+  font-size: 1.2em;
+  border-radius: 18px;
+  background-color: inherit;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}
+
+.clear-todos-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clear-todos-dark > button {
+  border: 1px solid #FFFFFF;
+  height: 3em;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  border-radius: 18px;
+  background-color: inherit;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
 }/*# sourceMappingURL=appContent.css.map */
