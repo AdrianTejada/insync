@@ -231,10 +231,6 @@
 
 @mixin appContent ($border) {
     width: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
 
     > div {
         > div.todo-item {
@@ -345,25 +341,22 @@
 	}
 }
 
-@mixin clearTodos ($border){
+@mixin clearTodos ($bg, $color){
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     > button {
-        border: 1px solid $border;
-        height: 3em;
-        color: $border;
-        font-size: 1.2em;
-        border-radius: 18px;
-        background-color: inherit;
-
-        padding: {
-            top: 0px;
-            bottom: 0px;
-            left: .8em;
-            right: .8em;
-        }          
+        transition: background-color .3s ease, border .3s ease;
+        border: 4px solid $bg ;
+        background-color: $bg;  
+        
+        > h3 {
+            font-size: 1.5em;
+            color: $color;
+            font-weight: normal;
+            padding: .8em;
+        }
     }
 }
 

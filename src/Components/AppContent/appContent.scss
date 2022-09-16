@@ -10,9 +10,9 @@
 }
 
 .clear-todos-light {
-    @include clearTodos(map-get($global, 'black'))    
+    @include clearTodos(map-get($global, 'black'), map-get($global, 'white'))    
 }
 
 .clear-todos-dark {
-    @include clearTodos(map-get($global, 'white'))
+    @include clearTodos(map-get($global, 'white'), map-get($global, 'black'))
 }
