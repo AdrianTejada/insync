@@ -22,36 +22,34 @@
 
 .clear-todos-light {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .clear-todos-light > button {
-  border: 1px solid #000000;
-  height: 3em;
-  color: #000000;
-  font-size: 1.2em;
-  border-radius: 18px;
-  background-color: inherit;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0.8em;
-  padding-right: 0.8em;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border: 4px solid #000000;
+  background-color: #000000;
+}
+.clear-todos-light > button > h3 {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  font-weight: normal;
+  padding: 0.8em;
 }
 
 .clear-todos-dark {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .clear-todos-dark > button {
-  border: 1px solid #FFFFFF;
-  height: 3em;
-  color: #FFFFFF;
-  font-size: 1.2em;
-  border-radius: 18px;
-  background-color: inherit;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0.8em;
-  padding-right: 0.8em;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border: 4px solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+.clear-todos-dark > button > h3 {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: normal;
+  padding: 0.8em;
 }/*# sourceMappingURL=appContent.css.map */

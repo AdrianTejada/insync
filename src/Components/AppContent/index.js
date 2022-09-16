@@ -31,6 +31,47 @@ const todoItem = {
   }
 };
 
+const clearAll = {
+  hidden: {
+    clipPath: "inset(10% 50% 90% 50% round 18px)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.3
+    }
+  },
+  visible: {
+    clipPath: "inset(0% 0% 0% 0% round 18px)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.7,
+    }
+  },
+  exit: {
+    clipPath: "inset(10% 50% 90% 50% round 18px)",
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.3
+    }
+  }
+};
+
+const textVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      type: "spring", 
+      stiffness: 200, 
+      damping: 9, 
+      delay: .2
+    }
+  },
+  closed: { opacity: 0, y: -20, transition: { duration: 0.2 } }
+};
+
 export default function AppContent() {
   const todoList = useSelector((state) => state.todo.todoList);
   const theme = useSelector((state)=>state.todo.todoTheme);
@@ -61,8 +102,10 @@ export default function AppContent() {
       <div className={`clear-todos-${theme}`}>
         <AnimatePresence>
           {(filteredTodoList.every((item)=>item.status === 'complete') && filteredTodoList.length > 0) && 
-              <motion.button whileTap={{ scale: 0.9 }} onClick={()=>dispatch(deleteCompleted())}>
-                clear all!
+              <motion.button whileTap={{ scale: 0.9 }} onClick={()=>dispatch(deleteCompleted())} initial='hidden' animate='visible' exit='exit' variants={clearAll} layout>
+                <motion.h3 variants={textVariants} initial='closed' animate='open'>
+                  clear all!
+                </motion.h3>
               </motion.button>
           }
         </AnimatePresence>
