@@ -1,6 +1,11 @@
 import React from 'react'
 import './button.css';
 import { useSelector } from 'react-redux';
+import {motion} from 'framer-motion';
+
+const tap = {
+  scale: 0.95
+}
 
 export default function Button({
   children,
@@ -11,8 +16,8 @@ export default function Button({
   const theme = useSelector((state)=>state.todo.todoTheme);
 
   return (
-    <button className={`button-${variant}-${theme}`} type={type} onClick={onClick}>
+    <motion.button whileTap={tap} className={`button-${variant}-${theme}`} type={type} onClick={onClick}>
       {children}
-    </button>
+    </motion.button>
   )
 }

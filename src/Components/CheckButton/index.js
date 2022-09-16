@@ -17,6 +17,10 @@ const checkVariants = {
   }
 };
 
+const tap = {
+  scale: 0.9
+}
+
 
 export default function CheckButton({
   checked,
@@ -28,6 +32,7 @@ export default function CheckButton({
     <motion.div className={`check-button-${theme}-${checked ? 'checked' : 'unchecked'}`}
     animate={checked ? 'checked' : 'unchecked'}
     onClick={onClick}
+    whileTap={tap}
     >
         <svg
             viewBox='0 0 53 38'

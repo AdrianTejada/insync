@@ -9,3 +9,10 @@
     @include appContent(map-get($dark, 'gray'));
 }
 
+.clear-todos-light {
+    @include clearTodos(map-get($global, 'black'))    
+}
+
+.clear-todos-dark {
+    @include clearTodos(map-get($global, 'white'))
+}
