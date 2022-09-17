@@ -165,4 +165,29 @@
 .todo-item-controls > button > svg {
   color: #868686;
   font-size: 1.7em;
+}
+
+.color-1 {
+  background-color: #FF7C5E;
+  border: none;
+}
+
+.color-2 {
+  background-color: #FF8959;
+  border: none;
+}
+
+.color-3 {
+  background-color: #FF9654;
+  border: none;
+}
+
+.color-4 {
+  background-color: #FFA34F;
+  border: none;
+}
+
+.color-5 {
+  background-color: #FFB04A;
+  border: none;
 }/*# sourceMappingURL=todoItem.css.map */

@@ -231,6 +231,7 @@
 
 @mixin appContent ($border) {
     width: 100%;
+    border-radius: 20px;
 
     > div {
         > div.todo-item {
@@ -238,8 +239,22 @@
             width: 100%;
         }
     }
+
+    :only-child > div.todo-item {
+        border-radius: 20px;
+    }
+
+    :first-child > div.todo-item {
+        border-radius: 20px 20px 0px 0px;
+    }
+
     :last-child > div.todo-item {
-        border: none
+        border: none;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    :only-child > div.todo-item {
+        border-radius: 20px;
     }
 }
 
@@ -347,6 +362,7 @@
     justify-content: center;
 
     > button {
+        margin-top: 1em;
         transition: background-color .3s ease, border .3s ease;
         border: 4px solid $bg ;
         background-color: $bg;  

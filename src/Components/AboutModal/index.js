@@ -17,7 +17,7 @@ export default function AboutModal({
         <ModalWrapper title='About' onClose={()=>setOpenModal(false)}>
           <div className={`about-${theme}`}>
             <p>
-              A simple todo list app built with React.js, Redux, SCSS and Framer. For the source code & documentation feel free to click on the Github icon below!
+              A simple todo list app built with React.js, Redux, SCSS and Framer Motion. For the source code & documentation feel free to click on the Github icon below!
             </p>
             <p>
               Designed & developed by Adrian Tejada.
