@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const getInitialTodo = () => {
     const localTodoList = window.localStorage.getItem('todoList');
@@ -79,22 +79,48 @@ export const todoSlice = createSlice({
                 state.todoTheme = 'light';
             }
         },
-        deleteCompleted: (state, action) => {
+        deleteCompleted: (state) => {
             const todoList = window.localStorage.getItem('todoList');
             if (todoList) {
                 const todoListArr = JSON.parse(todoList);
-
                 const filteredTodoList = todoListArr.filter((item)=>{
                       return item.status === 'incomplete';
                 })
-
-
                 window.localStorage.setItem('todoList', JSON.stringify(filteredTodoList));
                 state.todoList = filteredTodoList;
+            }
+        },
+        gradientify: (state) => {
+            const todoList = window.localStorage.getItem('todoList');
+            if (todoList) {
+                const todoListArr = JSON.parse(todoList);
+                var currentColor = 1;
+                var increasing = true;
+
+                todoListArr.forEach((item, index)=>{
+                    if (increasing) {
+                        item.color = currentColor
+                        currentColor++;
+                        if (currentColor === 6) {
+                            increasing = false;
+                            currentColor = 4;
+                        }
+                    } else {
+                        item.color = currentColor
+                        currentColor--;
+                        if (currentColor === 0) {
+                            increasing = true;
+                            currentColor = 2;
+                        }
+                    }
+                })
+
+                window.localStorage.setItem('todoList', JSON.stringify(todoListArr));
+                state.todoList = todoListArr;
             }
         }
     }
 });
 
-export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme, deleteCompleted } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme, deleteCompleted, gradientify } = todoSlice.actions;
 export default todoSlice.reducer;
