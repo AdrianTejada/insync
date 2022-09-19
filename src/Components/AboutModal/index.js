@@ -1,9 +1,10 @@
 import React from 'react'
 import ModalWrapper from '../ModalWrapper';
 import Button from '../Button';
-import {VscGithubInverted} from 'react-icons/vsc';
-import { useSelector } from 'react-redux';
 import './aboutModal.css'
+import {VscGithubInverted} from 'react-icons/vsc';
+import { useSelector, useDispatch } from 'react-redux';
+import { gradientify } from '../../Slices/todoSlice';
 import { AnimatePresence } from 'framer-motion';
 
 export default function AboutModal({
@@ -11,6 +12,7 @@ export default function AboutModal({
     setOpenModal
 }) {
   const theme = useSelector((state)=>state.todo.todoTheme);
+  const dispatch = useDispatch();
 
   return ( <AnimatePresence>
     {openModal && (
@@ -29,7 +31,7 @@ export default function AboutModal({
               <button>
                 <VscGithubInverted/>
               </button>
-              <Button>
+              <Button onClick={()=>dispatch(gradientify())}>
                 gradientify!
               </Button>
             </div>
