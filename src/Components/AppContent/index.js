@@ -5,30 +5,24 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteCompleted } from '../../Slices/todoSlice';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const todoItem = {
-  hidden: {
-    y: 30,
-    opacity : 0,
-    scale: 1
-  },
+const container = {
+  hidden: {},
   visible: {
-    y: 0,
     opacity: 1,
     scale: 1,
     transition: {
-      type: 'tween',
-      duration: .4,
-      ease: 'easeOut'
-    }
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.95,
-    transition: {
-      type: 'tween',
-      duration: .2
+      staggerChildren: 0.15
     }
   }
+};
+
+const todoItem = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  },
+  exit: {y: 20, opacity: 0}
 };
 
 const clearAll = {
@@ -76,6 +70,7 @@ export default function AppContent() {
   const todoList = useSelector((state) => state.todo.todoList);
   const theme = useSelector((state)=>state.todo.todoTheme);
   const filter = useSelector((state)=>state.todo.todoFilter)
+  const showList =useSelector((state)=>state.todo.showList)
   const dispatch = useDispatch();
   const sortedTodoList = [...todoList];
 
@@ -90,15 +85,16 @@ export default function AppContent() {
   })
   return ( 
     <>
-      <div className={`app-content-${theme}`}>
+      {showList && <motion.div className={`app-content-${theme}`}       variants={container}
+      initial="hidden"
+      animate="visible">
         <AnimatePresence mode='popLayout'>
-          {filteredTodoList && filteredTodoList.length > 0 ? 
-          filteredTodoList.map((item)=> <motion.div layout variants={todoItem} initial='hidden' animate='visible' exit='exit' key={item.id}>
+          {filteredTodoList && filteredTodoList.length > 0  && 
+          filteredTodoList.map((item)=> <motion.div layout variants={todoItem} key={item.id}>
               <TodoItem item={item}/>
-            </motion.div>)
-          : null }
+            </motion.div>)}
         </AnimatePresence>
-      </div>
+      </motion.div> }
       <div className={`clear-todos-${theme}`}>
         <AnimatePresence>
           {(filteredTodoList.every((item)=>item.status === 'complete') && filteredTodoList.length > 0) && 

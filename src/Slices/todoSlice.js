@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const getInitialTodo = () => {
     const localTodoList = window.localStorage.getItem('todoList');
@@ -21,7 +21,8 @@ const getIntialTheme = () => {
 const initialValue = {
     todoList: getInitialTodo(),
     todoFilter: 'all',
-    todoTheme: getIntialTheme()
+    todoTheme: getIntialTheme(),
+    showList: true
 };
 
 export const todoSlice = createSlice({
@@ -118,9 +119,12 @@ export const todoSlice = createSlice({
                 window.localStorage.setItem('todoList', JSON.stringify(todoListArr));
                 state.todoList = todoListArr;
             }
+        },
+        toggleShowList: (state) => {
+            state.showList = !state.showList
         }
     }
 });
 
-export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme, deleteCompleted, gradientify } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodo, updateFilter, updateTheme, deleteCompleted, gradientify, toggleShowList } = todoSlice.actions;
 export default todoSlice.reducer;

@@ -4,7 +4,7 @@ import Button from '../Button';
 import './aboutModal.css'
 import {VscGithubInverted} from 'react-icons/vsc';
 import { useSelector, useDispatch } from 'react-redux';
-import { gradientify } from '../../Slices/todoSlice';
+import { gradientify, toggleShowList } from '../../Slices/todoSlice';
 import { AnimatePresence } from 'framer-motion';
 
 export default function AboutModal({
@@ -13,6 +13,15 @@ export default function AboutModal({
 }) {
   const theme = useSelector((state)=>state.todo.todoTheme);
   const dispatch = useDispatch();
+
+  const handleGradientify = () => {
+    dispatch(toggleShowList())
+    dispatch(gradientify())
+    setOpenModal(false)
+    setTimeout(()=>{
+      dispatch(toggleShowList())
+    }, [1])
+  };
 
   return ( <AnimatePresence>
     {openModal && (
@@ -31,7 +40,7 @@ export default function AboutModal({
               <button>
                 <VscGithubInverted/>
               </button>
-              <Button onClick={()=>dispatch(gradientify())}>
+              <Button onClick={handleGradientify}>
                 gradientify!
               </Button>
             </div>
