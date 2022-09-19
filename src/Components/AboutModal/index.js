@@ -20,7 +20,7 @@ export default function AboutModal({
     setOpenModal(false)
     setTimeout(()=>{
       dispatch(toggleShowList())
-    }, [1])
+    }, [100])
   };
 
   return ( <AnimatePresence>

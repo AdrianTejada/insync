@@ -6,7 +6,7 @@ export default function ColorSelect({
     selectedColor='0',
     currentColor=()=>{}
 }) {
-    const colorArr = ['0', '1', '2', '3', '4', '5'];
+    const colorArr = ['0', '6', '7', '8', '9', '10'];
     const [color, setColor] = useState(selectedColor)
     const theme = useSelector((state)=>state.todo.todoTheme);
 

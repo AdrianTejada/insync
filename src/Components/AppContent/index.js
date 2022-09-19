@@ -11,7 +11,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.25
     }
   }
 };
@@ -85,9 +85,7 @@ export default function AppContent() {
   })
   return ( 
     <>
-      {showList && <motion.div className={`app-content-${theme}`}       variants={container}
-      initial="hidden"
-      animate="visible">
+      {showList && <motion.div className='app-content' variants={container} initial="hidden" animate="visible">
         <AnimatePresence mode='popLayout'>
           {filteredTodoList && filteredTodoList.length > 0  && 
           filteredTodoList.map((item)=> <motion.div layout variants={todoItem} key={item.id}>
