@@ -24,13 +24,13 @@ export default function Functions({
     <div className={`functions-${theme}`}>
        <div>
         <Button onClick={onTodoClick}>
-          new todo<MdPlaylistAdd/>
+          new task<MdPlaylistAdd/>
           </Button>
         <Switch/>
        </div>
        <div>
           <SelectButton onChange={(event)=>handleFilterChange(event)} value={filter}>
-            <option value='all'>all items</option>
+            <option value='all'>all tasks</option>
             <option value='incomplete'>incomplete</option>
             <option value='complete'>complete</option>
           </SelectButton>

@@ -29,9 +29,11 @@ body {
 }
 
 .layout {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
+  // padding-bottom: 50em;
+  overflow: scroll;
 
   @include xs {
     width: 100vw;

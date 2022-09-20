@@ -39,6 +39,7 @@
 	background-color: $bg;
 	display: flex;
 	justify-content: center;
+    overflow: scroll;
 }
 
 @mixin title ($color, $fontSize, $fontSizeXs) {

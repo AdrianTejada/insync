@@ -37,7 +37,7 @@ function App() {
       />
       <div className={`app-base-${theme}`}>
         <div className='layout'>
-          <Title>Todo List</Title>
+          <Title>InSync</Title>
           <div>
             <Functions
               onTodoClick={()=>setTodoModal(true)}
