@@ -12,7 +12,6 @@ export default function Functions({
   onAboutClick=()=>{},
 }) {
   const filter = useSelector((state)=>state.todo.todoFilter);
-  const theme = useSelector((state)=>state.todo.todoTheme);
   const dispatch = useDispatch();
 
   const handleFilterChange = (event) => {
