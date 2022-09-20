@@ -28,7 +28,7 @@ export default function AboutModal({
         <ModalWrapper title='About' onClose={()=>setOpenModal(false)}>
           <div className={`about-${theme}`}>
             <p>
-              A simple todo list app built with React.js, Redux, SCSS and Framer Motion. For the source code & documentation feel free to click on the Github icon below!
+              A single page todo app built with React.js, Redux, SCSS and Framer Motion. For the source code & documentation feel free to click on the Github icon below!
             </p>
             <p>
               Designed & developed by Adrian Tejada.
@@ -37,7 +37,7 @@ export default function AboutModal({
               https://www.atejada.dev/
             </a>
             <div>
-              <button>
+              <button onClick={()=>window.open('https://github.com/AdrianTejada/insynccc')}>
                 <VscGithubInverted/>
               </button>
               <Button onClick={handleGradientify}>
