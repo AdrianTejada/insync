@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 
 const tap = {
-  scale: 0.95
+  scale: 0.90
 }
 
 export default function SelectButton ({children, onChange, value}) {

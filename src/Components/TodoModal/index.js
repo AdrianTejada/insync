@@ -30,8 +30,6 @@ export default function TodoModal({
           time: new Date().toLocaleString(),
           status: 'incomplete',
         }));
-  
-        toast.success('added new todo!');
         setTitle(null);
         setDescript(null);
         setColor('0');

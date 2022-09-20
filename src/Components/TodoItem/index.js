@@ -9,8 +9,8 @@ import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
 const tap = {
-  scale: 0.9
-}
+  scale: 0.8
+};
 
 const expandIcon = {
   expand: { 
@@ -59,6 +59,14 @@ export default function TodoItem({
   const dispatch = useDispatch();
   const theme = useSelector((state)=>state.todo.todoTheme);
 
+  const messages = [
+    "well done.",
+    "good work!",
+    "looking good! 😎",
+    "fight!!! 💪",
+    "another one off the list.",
+  ]
+
   useEffect(()=>{
     if (item.status ==='complete'){
       setChecked(true)
@@ -68,11 +76,14 @@ export default function TodoItem({
   const handleCheck = () => {
     setChecked(!checked)
     dispatch(updateTodo({...item, status: item.status === 'incomplete' ? 'complete' : 'incomplete'}))
+    if (item.status === 'incomplete') {
+      const random = Math.floor(Math.random() * messages.length)
+      toast.success(messages[random])
+    }
   }
   
   const handleDelete = () => {
     dispatch(deleteTodo(item.id));
-    toast.success('good work!')
   }
 
   return (

@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import './colorSelect.css';
 import { useSelector } from 'react-redux';
+import {motion} from 'framer-motion'
+
+const tap ={ scale: 0.8}
 
 export default function ColorSelect({
     selectedColor='0',
@@ -23,7 +26,7 @@ export default function ColorSelect({
         <div>
             {colorArr.map((value)=><span key={value}>
                 <input type='radio' value={value} checked={color === value} name={value} readOnly/>
-                <label htmlFor={value} onClick={()=>handleChange(value)} className={`gradient-${value}`}/>
+                <motion.label whileTap={tap} htmlFor={value} onClick={()=>handleChange(value)} className={`gradient-${value}`}/>
             </span>)}
         </div>
     </div>
