@@ -1,17 +1,43 @@
 .functions {
-  margin-top: 2.5em;
-  margin-bottom: 2.9em;
-  margin-left: 0px;
-  margin-right: 0px;
   width: 100%;
-  height: 5.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: static;
+  z-index: 2;
 }
 .functions div {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 960px) {
+  .functions {
+    height: 5.5em;
+    margin-top: 2.5em;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .functions div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 959px) {
+  .functions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 7.5em;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-top: 1px solid #868686;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
 }/*# sourceMappingURL=functions.css.map */

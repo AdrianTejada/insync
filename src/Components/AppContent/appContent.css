@@ -1,5 +1,6 @@
 .app-content {
   width: 100%;
+  padding-top: 2.4em;
 }
 .app-content :first-child > div.todo-item-light, .app-content :first-child > div.todo-item-dark {
   border-radius: 20px 20px 0px 0px;
@@ -11,23 +12,6 @@
 .app-content :only-child > div.todo-item-light, .app-content :only-child > div.todo-item-dark {
   border-radius: 20px;
   border: none;
-}
-
-.app-content-dark {
-  width: 100%;
-}
-.app-content-dark :only-child > div.todo-item {
-  border-radius: 20px;
-}
-.app-content-dark :first-child > div.todo-item {
-  border-radius: 20px 20px 0px 0px;
-}
-.app-content-dark :last-child > div.todo-item {
-  border: none;
-  border-radius: 0px 0px 20px 20px;
-}
-.app-content-dark :only-child > div.todo-item {
-  border-radius: 20px;
 }
 
 .clear-todos-light {

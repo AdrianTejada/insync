@@ -42,9 +42,9 @@ body {
 }
 
 .layout {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 @media (min-width: 0) {
   .layout {
@@ -56,5 +56,14 @@ body {
   .layout {
     width: 960px;
     padding: 2.3em;
+  }
+}
+
+.responsive-padding {
+  padding-bottom: 0;
+}
+@media screen and (max-width: 959px) {
+  .responsive-padding {
+    padding-bottom: 7em;
   }
 }/*# sourceMappingURL=index.css.map */

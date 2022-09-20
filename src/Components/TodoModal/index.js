@@ -42,8 +42,6 @@ export default function TodoModal({
           description: descript,
           color,
         }));
-  
-        toast.success('updated');
         setOpenModal(false);
       } else {
         toast.error('no changes made!')
@@ -71,9 +69,9 @@ export default function TodoModal({
 
   return (<AnimatePresence>
       {openModal && (
-        <ModalWrapper title={type === 'new' ? 'New Todo' : 'Edit Todo' } onClose={()=>setOpenModal(false)}>
+        <ModalWrapper title={type === 'new' ? 'New Task' : 'Edit ask' } onClose={()=>setOpenModal(false)}>
         <ModalFunctions
-          button1Text={type === 'new' ? 'create todo' : 'confirm'}
+          button1Text={type === 'new' ? 'create task' : 'confirm'}
           onButton1Click={handleSubmit}
           onButton2Click={()=>setOpenModal(false)}
           titleValue={title}

@@ -37,8 +37,8 @@ function App() {
       />
       <div className={`app-base-${theme}`}>
         <div className='layout'>
-          <Title>Todo List</Title>
-          <div>
+          <Title>InSync</Title>
+          <div className='responsive-padding'>
             <Functions
               onTodoClick={()=>setTodoModal(true)}
               onAboutClick={()=>setAboutModal(true)}
