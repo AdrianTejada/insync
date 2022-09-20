@@ -1,17 +1,12 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
 
-.todo-item {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
-    padding: {
-        bottom: 0.5625em;
-        top: 0.5625em;
-    }
+.todo-item-light {
+    @include todoItem(map-get($light, 'gray'))    
+}
+
+.todo-item-dark {
+    @include todoItem(map-get($dark, 'gray'))
 }
 
 .todo-item-info-light-incomplete {

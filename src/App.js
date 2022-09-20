@@ -15,7 +15,17 @@ function App() {
 
   return (
     <>
-      <Toaster/>
+      <Toaster
+       toastOptions={{
+        style: {
+          backgroundColor: theme === 'light' ? '#F3F3F3' : '#1B1B1B',
+          color: theme === 'light' ? 'black' : 'white',
+          borderRadius: '0px',
+          width: '100%',
+          boxShadow: `0px 2px 5px 2px ${theme === 'light' ? 'gray' : 'black'}`,
+        },
+      }}
+      />
       <AboutModal
         openModal={aboutModal}
         setOpenModal={setAboutModal}

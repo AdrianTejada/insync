@@ -4,6 +4,7 @@ import TodoItem from '../TodoItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteCompleted } from '../../Slices/todoSlice';
 import { motion, AnimatePresence } from 'framer-motion';
+import { toast } from 'react-hot-toast';
 
 const container = {
   hidden: {},
@@ -11,7 +12,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.25
     }
   }
 };
@@ -74,8 +75,21 @@ export default function AppContent() {
   const dispatch = useDispatch();
   const sortedTodoList = [...todoList];
 
-  sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
+  const messages = [
+    "satisfying, no?",
+    "you're unstoppable! 😤",
+    "♡＼(￣▽￣)／♡",
+    "🐐",
+    "you're a virtuoso.",
+  ]
 
+  const handleClearAll = () => {
+    dispatch(deleteCompleted());
+    const random = Math.floor(Math.random() * messages.length)
+      toast.success(messages[random])
+  }
+
+  sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
   const filteredTodoList = sortedTodoList.filter((item)=>{
     if (filter === 'all') {
       return true;
@@ -83,11 +97,10 @@ export default function AppContent() {
       return item.status === filter;
     }
   })
+
   return ( 
     <>
-      {showList && <motion.div className={`app-content-${theme}`}       variants={container}
-      initial="hidden"
-      animate="visible">
+      {showList && <motion.div className='app-content' variants={container} initial="hidden" animate="visible">
         <AnimatePresence mode='popLayout'>
           {filteredTodoList && filteredTodoList.length > 0  && 
           filteredTodoList.map((item)=> <motion.div layout variants={todoItem} key={item.id}>
@@ -98,7 +111,7 @@ export default function AppContent() {
       <div className={`clear-todos-${theme}`}>
         <AnimatePresence>
           {(filteredTodoList.every((item)=>item.status === 'complete') && filteredTodoList.length > 0) && 
-              <motion.button whileTap={{ scale: 0.9 }} onClick={()=>dispatch(deleteCompleted())} initial='hidden' animate='visible' exit='exit' variants={clearAll} layout>
+              <motion.button whileTap={{ scale: 0.9 }} onClick={handleClearAll} initial='hidden' animate='visible' exit='exit' variants={clearAll} layout>
                 <motion.h3 variants={textVariants} initial='closed' animate='open'>
                   clear all!
                 </motion.h3>

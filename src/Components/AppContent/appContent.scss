@@ -1,8 +1,29 @@
 @import '../../Styles/variables';
 @import '../../Styles/mixins';
 
-.app-content-light {
-    @include appContent(map-get($light, 'gray'));
+.app-content {
+    width: 100%;
+
+
+    :first-child > {
+        div.todo-item-light, div.todo-item-dark {
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+
+    :last-child > {
+        div.todo-item-light, div.todo-item-dark {
+            border: none;
+            border-radius: 0px 0px 20px 20px;
+        }
+    }
+
+    :only-child > {
+        div.todo-item-light, div.todo-item-dark {
+            border-radius: 20px;
+            border: none
+        }
+    }
 
 }
 .app-content-dark {

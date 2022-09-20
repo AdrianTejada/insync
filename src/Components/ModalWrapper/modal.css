@@ -22,7 +22,7 @@
   align-items: flex-start;
   background-color: #F3F3F3;
   padding: 2em;
-  box-shadow: 0px 2px 5px 2px gray;
+  box-shadow: 0px 2px 5px 2px #868686;
 }
 @media (min-width: 0) {
   .modal-container-light {
@@ -57,7 +57,7 @@
   align-items: flex-start;
   background-color: #1B1B1B;
   padding: 2em;
-  box-shadow: 0px 2px 5px 2px gray;
+  box-shadow: 0px 2px 5px 2px #000000;
 }
 @media (min-width: 0) {
   .modal-container-dark {

@@ -1,31 +1,19 @@
-.app-content-light {
-  width: 100%;
-  border-radius: 20px;
-}
-.app-content-light > div > div.todo-item {
-  border-bottom: 1px solid #A4A4A4;
+.app-content {
   width: 100%;
 }
-.app-content-light :only-child > div.todo-item {
-  border-radius: 20px;
-}
-.app-content-light :first-child > div.todo-item {
+.app-content :first-child > div.todo-item-light, .app-content :first-child > div.todo-item-dark {
   border-radius: 20px 20px 0px 0px;
 }
-.app-content-light :last-child > div.todo-item {
+.app-content :last-child > div.todo-item-light, .app-content :last-child > div.todo-item-dark {
   border: none;
   border-radius: 0px 0px 20px 20px;
 }
-.app-content-light :only-child > div.todo-item {
+.app-content :only-child > div.todo-item-light, .app-content :only-child > div.todo-item-dark {
   border-radius: 20px;
+  border: none;
 }
 
 .app-content-dark {
-  width: 100%;
-  border-radius: 20px;
-}
-.app-content-dark > div > div.todo-item {
-  border-bottom: 1px solid #676767;
   width: 100%;
 }
 .app-content-dark :only-child > div.todo-item {

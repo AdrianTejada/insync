@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import './colorSelect.css';
 import { useSelector } from 'react-redux';
+import {motion} from 'framer-motion'
+
+const tap ={ scale: 0.8}
 
 export default function ColorSelect({
     selectedColor='0',
     currentColor=()=>{}
 }) {
-    const colorArr = ['0', '1', '2', '3', '4', '5'];
+    const colorArr = ['0', '6', '7', '8', '9', '10'];
     const [color, setColor] = useState(selectedColor)
     const theme = useSelector((state)=>state.todo.todoTheme);
 
@@ -23,7 +26,7 @@ export default function ColorSelect({
         <div>
             {colorArr.map((value)=><span key={value}>
                 <input type='radio' value={value} checked={color === value} name={value} readOnly/>
-                <label htmlFor={value} onClick={()=>handleChange(value)} className={`gradient-${value}`}/>
+                <motion.label whileTap={tap} htmlFor={value} onClick={()=>handleChange(value)} className={`gradient-${value}`}/>
             </span>)}
         </div>
     </div>
