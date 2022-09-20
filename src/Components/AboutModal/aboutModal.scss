@@ -8,3 +8,7 @@
 .about-dark {
     @include about (map-get($global, 'white'))
 }
+
+.link {
+    margin-bottom: 1em;
+}

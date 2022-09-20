@@ -39,7 +39,6 @@
 	background-color: $bg;
 	display: flex;
 	justify-content: center;    
-    // padding-bottom: 7em;
 }
 
 @mixin title ($color, $fontSize, $fontSizeXs) {
@@ -275,7 +274,13 @@
     widht: 100%;
     margin-top: 1.125em;
 
-    > p,a {
+    > p {
+        font-size: 1em;
+        margin-top: 1em;
+        color: $color;
+    }
+
+    > a {
         font-size: 1em;
         margin-top: 1em;
         color: $color;
