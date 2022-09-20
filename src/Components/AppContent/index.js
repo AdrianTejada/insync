@@ -80,6 +80,7 @@ export default function AppContent() {
     "you're unstoppable! 😤",
     "♡＼(￣▽￣)／♡",
     "🐐",
+    "you're a virtuoso.",
   ]
 
   const handleClearAll = () => {
