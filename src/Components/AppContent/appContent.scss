@@ -3,6 +3,7 @@
 
 .app-content {
     width: 100%;
+    padding-top: 2.4em;
 
 
     :first-child > {
@@ -25,9 +26,6 @@
         }
     }
 
-}
-.app-content-dark {
-    @include appContent(map-get($dark, 'gray'));
 }
 
 .clear-todos-light {

@@ -11,7 +11,8 @@ export default function Functions({
   onTodoClick=()=>{},
   onAboutClick=()=>{},
 }) {
-  const filter = useSelector((state)=>state.todo.todoFilter)
+  const filter = useSelector((state)=>state.todo.todoFilter);
+  const theme = useSelector((state)=>state.todo.todoTheme);
   const dispatch = useDispatch();
 
   const handleFilterChange = (event) => {
@@ -20,7 +21,7 @@ export default function Functions({
   };
 
   return (
-    <div className='functions'>
+    <div className={`functions-${theme}`}>
        <div>
         <Button onClick={onTodoClick}>
           new todo<MdPlaylistAdd/>

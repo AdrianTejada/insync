@@ -77,10 +77,10 @@ export default function AppContent() {
 
   const messages = [
     "satisfying, no?",
-    "you're unstoppable! 😤",
+    "unstoppable. 😤",
     "♡＼(￣▽￣)／♡",
     "🐐",
-    "you're a virtuoso.",
+    "all done!"
   ]
 
   const handleClearAll = () => {

@@ -64,7 +64,7 @@ export default function TodoItem({
     "good work!",
     "looking good! 😎",
     "fight!!! 💪",
-    "another one off the list.",
+    "another one off the list!",
   ]
 
   useEffect(()=>{
