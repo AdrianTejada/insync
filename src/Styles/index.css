@@ -27,7 +27,7 @@ body {
 
 .app-base-light {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #F3F3F3;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ body {
 
 .app-base-dark {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1B1B1B;
   display: flex;
   justify-content: center;
@@ -44,7 +44,6 @@ body {
 .layout {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
 }
 @media (min-width: 0) {
   .layout {

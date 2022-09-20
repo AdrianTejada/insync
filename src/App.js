@@ -7,6 +7,7 @@ import AboutModal from './Components/AboutModal';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 function App() {
   const [todoModal, setTodoModal] = useState(false);
@@ -35,6 +36,7 @@ function App() {
         setOpenModal={setTodoModal}
         type='new'
       />
+      <Scrollbars style={{ height: '100vh', width: '100vw' }}>
       <div className={`app-base-${theme}`}>
         <div className='layout'>
           <Title>InSync</Title>
@@ -47,6 +49,7 @@ function App() {
           </div>
         </div>
       </div>  
+      </Scrollbars>
     </>
   );
 }
