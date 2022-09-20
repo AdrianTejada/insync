@@ -61,10 +61,14 @@ export default function TodoItem({
 
   const messages = [
     "well done.",
+    "well done.",
+    "well done.",
+    "good work!",
+    "good work!",
     "good work!",
     "looking good! 😎",
     "fight!!! 💪",
-    "another one off the list!",
+    "another one off the list.",
   ]
 
   useEffect(()=>{

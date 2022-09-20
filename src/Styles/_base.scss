@@ -29,10 +29,8 @@ body {
 }
 
 .layout {
-  // height: 100vh;
   display: flex;
   flex-direction: column;
-  // padding-bottom: 50em;
   overflow: scroll;
 
   @include xs {
@@ -46,3 +44,10 @@ body {
   }
 }
 
+.responsive-padding {
+  padding-bottom: 0;
+
+  @media screen and (max-width: 959px) {
+    padding-bottom: 7em;
+  }
+}

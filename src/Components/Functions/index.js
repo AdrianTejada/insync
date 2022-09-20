@@ -21,7 +21,7 @@ export default function Functions({
   };
 
   return (
-    <div className={`functions-${theme}`}>
+    <div className='functions'>
        <div>
         <Button onClick={onTodoClick}>
           new task<MdPlaylistAdd/>

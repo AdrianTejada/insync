@@ -31,7 +31,6 @@ body {
   background-color: #F3F3F3;
   display: flex;
   justify-content: center;
-  overflow: scroll;
 }
 
 .app-base-dark {
@@ -40,7 +39,6 @@ body {
   background-color: #1B1B1B;
   display: flex;
   justify-content: center;
-  overflow: scroll;
 }
 
 .layout {
@@ -58,5 +56,14 @@ body {
   .layout {
     width: 960px;
     padding: 2.3em;
+  }
+}
+
+.responsive-padding {
+  padding-bottom: 0;
+}
+@media screen and (max-width: 959px) {
+  .responsive-padding {
+    padding-bottom: 7em;
   }
 }/*# sourceMappingURL=index.css.map */

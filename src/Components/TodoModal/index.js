@@ -42,8 +42,6 @@ export default function TodoModal({
           description: descript,
           color,
         }));
-  
-        toast.success('updated');
         setOpenModal(false);
       } else {
         toast.error('no changes made!')
