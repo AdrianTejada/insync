@@ -31,7 +31,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 7.5em;
+    height: 7.4em;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     border-top: 1px solid #868686;
@@ -40,4 +40,60 @@
     padding-bottom: 1em;
     padding-top: 1em;
   }
+}
+
+.add-todo-light {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  background-color: #F3F3F3;
+}
+.add-todo-light > svg {
+  font-size: 2em;
+}
+
+.add-todo-dark {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
+  padding: 0.5em;
+  background-color: #1B1B1B;
+}
+.add-todo-dark > svg {
+  font-size: 2em;
+}
+
+.info-light {
+  color: #868686;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #868686;
+  padding: 0.3em;
+  background-color: #F3F3F3;
+}
+.info-light > svg {
+  font-size: 1.5em;
+}
+
+.info-dark {
+  color: #868686;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #868686;
+  padding: 0.3em;
+  background-color: #1B1B1B;
+}
+.info-dark > svg {
+  font-size: 1.5em;
 }/*# sourceMappingURL=functions.css.map */

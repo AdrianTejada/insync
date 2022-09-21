@@ -12,13 +12,13 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .button-primary-light > svg {
-  font-size: 1.7em;
-  margin-left: 0.3em;
-  padding-right: -0.2em;
+  font-size: 2em;
+  margin-left: 0.15em;
+  padding-right: 0em;
 }
 
 .button-secondary-light {
@@ -35,13 +35,13 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .button-secondary-light > svg {
-  font-size: 1.7em;
-  margin-left: 0.3em;
-  padding-right: -0.2em;
+  font-size: 2em;
+  margin-left: 0.15em;
+  padding-right: 0em;
 }
 
 .button-primary-dark {
@@ -58,13 +58,13 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .button-primary-dark > svg {
-  font-size: 1.7em;
-  margin-left: 0.3em;
-  padding-right: -0.2em;
+  font-size: 2em;
+  margin-left: 0.15em;
+  padding-right: 0em;
 }
 
 .button-secondary-dark {
@@ -81,11 +81,11 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .button-secondary-dark > svg {
-  font-size: 1.7em;
-  margin-left: 0.3em;
-  padding-right: -0.2em;
+  font-size: 2em;
+  margin-left: 0.15em;
+  padding-right: 0em;
 }/*# sourceMappingURL=button.css.map */

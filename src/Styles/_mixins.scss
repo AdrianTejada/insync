@@ -39,7 +39,6 @@
 	background-color: $bg;
 	display: flex;
 	justify-content: center;    
-    // padding-bottom: 7em;
 }
 
 @mixin title ($color, $fontSize, $fontSizeXs) {
@@ -85,13 +84,13 @@
     }
     
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     > svg {
-        font-size: 1.7em;
-        margin-left: .3em;
-        padding-right: -.2em;
+        font-size: 2em;
+        margin-left: .15em;
+        padding-right: 0em;
     }
 }
 
@@ -275,7 +274,13 @@
     widht: 100%;
     margin-top: 1.125em;
 
-    > p,a {
+    > p {
+        font-size: 1em;
+        margin-top: 1em;
+        color: $color;
+    }
+
+    > a {
         font-size: 1em;
         margin-top: 1em;
         color: $color;
@@ -362,4 +367,34 @@
         bottom: 0.5625em;
         top: 0.5625em;
     };
+}
+
+@mixin addTodo ($color, $bg) {
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid $color;
+    padding: .5em;
+    background-color: $bg;
+
+    > svg {
+        font-size: 2em;
+    }
+}
+
+@mixin info ($color, $bg) {
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid $color;
+    padding: .3em;
+    background-color: $bg;
+
+    > svg {
+        font-size: 1.5em;
+    }
 }

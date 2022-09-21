@@ -30,10 +30,10 @@ export default function AboutModal({
             <p>
               A single page todo app built with React.js, Redux, SCSS and Framer Motion. For the source code & documentation feel free to click on the Github icon below!
             </p>
-            <p>
+            <p className='link'>
               Designed & developed by Adrian Tejada.
             </p>
-            <a target='_blank' href='https://www.atejada.dev/' rel="noopener noreferrer">
+            <a target='_blank' href='https://www.atejada.dev/' rel="noopener noreferrer" className='link'>
               https://www.atejada.dev/
             </a>
             <div>
