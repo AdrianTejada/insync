@@ -91,7 +91,7 @@ export default function AppContent() {
       toast.success(messages[random])
   }
 
-  sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
+  // sortedTodoList.sort((a, b)=> new Date(a.time) - new Date(b.time));
   const filteredTodoList = sortedTodoList.filter((item)=>{
     if (filter === 'all') {
       return true;
