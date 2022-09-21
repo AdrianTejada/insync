@@ -25,7 +25,7 @@ export default function AboutModal({
         dispatch(toggleShowList())
       }, [100])
     } else {
-      toast.error('must create at least 2 tasks!')
+      toast('must create at least 2 tasks!')
     }
   };
 
