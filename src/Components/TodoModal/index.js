@@ -27,7 +27,7 @@ export default function TodoModal({
           title,
           description: descript,
           color,
-          time: new Date().toLocaleString(),
+          time: new Date().getDate().toString() + '.' + new Date().getMonth().toString() + '.' + new Date().getFullYear().toString() + ' ' + new Date().getHours().toString() + ':' + new Date().getMinutes().toString(),
           status: 'incomplete',
         }));
         setTitle(null);
