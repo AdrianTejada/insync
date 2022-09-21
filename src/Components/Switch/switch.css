@@ -13,7 +13,7 @@
   border-radius: 1em;
   background-color: #E7E7E7;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 .switch-light > div > button {
@@ -47,7 +47,7 @@
   border-radius: 1em;
   background-color: #292929;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 .switch-dark > div > button {

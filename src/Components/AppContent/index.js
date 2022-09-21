@@ -103,13 +103,20 @@ export default function AppContent() {
   return ( 
     <>
       {showList && <motion.div className='app-content' variants={container} initial="hidden" animate="visible">
-        <AnimatePresence mode='popLayout'>
+        <AnimatePresence mode='sync'>
           {filteredTodoList && filteredTodoList.length > 0  && 
-          filteredTodoList.map((item)=> <motion.div layout variants={todoItem} key={item.id}>
+          filteredTodoList.map((item, index)=> <motion.div layout variants={todoItem} key={item.id} className={`color-${item.color}`} 
+          style={{
+            borderBottom: index === filteredTodoList.length-1 || item.color !== '0' ? 'none' : theme=== 'light' ? '1px solid #A4A4A4' : '1px solid #676767', 
+            borderRadius: filteredTodoList.length === 1 ? '20px' 
+                          : index === 0 && filteredTodoList.length > 1 ? '20px 20px 0px 0px'
+                          : index === filteredTodoList.length-1 ? '0px 0px 20px 20px' 
+                          : '0px'
+          }}>
               <TodoItem item={item}/>
             </motion.div>)}
         </AnimatePresence>
-      </motion.div> }
+      </motion.div>}
       <div className={`clear-todos-${theme}`}>
         <AnimatePresence>
           {(filteredTodoList.every((item)=>item.status === 'complete') && filteredTodoList.length > 0) && 
