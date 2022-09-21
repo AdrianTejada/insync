@@ -15,7 +15,6 @@ export default function Functions({
   onAboutClick=()=>{},
 }) {
   const filter = useSelector((state)=>state.todo.todoFilter);
-  const todoList = useSelector((state) => state.todo.todoList);
   const theme = useSelector((state)=>state.todo.todoTheme);
   const dispatch = useDispatch();
 
