@@ -6,21 +6,27 @@ import {VscGithubInverted} from 'react-icons/vsc';
 import { useSelector, useDispatch } from 'react-redux';
 import { gradientify, toggleShowList } from '../../Slices/todoSlice';
 import { AnimatePresence } from 'framer-motion';
+import { toast } from 'react-hot-toast';
 
 export default function AboutModal({
     openModal,
     setOpenModal
 }) {
   const theme = useSelector((state)=>state.todo.todoTheme);
+  const todoList = useSelector((state)=>state.todo.todoList);
   const dispatch = useDispatch();
 
   const handleGradientify = () => {
-    dispatch(toggleShowList())
-    dispatch(gradientify())
-    setOpenModal(false)
-    setTimeout(()=>{
+    if (todoList.length > 1) {
       dispatch(toggleShowList())
-    }, [100])
+      dispatch(gradientify())
+      setOpenModal(false)
+      setTimeout(()=>{
+        dispatch(toggleShowList())
+      }, [100])
+    } else {
+      toast.error('must create at least 2 tasks!')
+    }
   };
 
   return ( <AnimatePresence>
