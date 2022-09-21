@@ -98,7 +98,7 @@ export default function TodoItem({
         type='edit'
         item={item}
       />
-      <div className={`todo-item-${theme} color-${item.color}`}>
+      <div className={`todo-item-${theme}`}>
         <span className={`todo-item-info-${theme}-${item.status}`}>
           <CheckButton
             checked={checked}

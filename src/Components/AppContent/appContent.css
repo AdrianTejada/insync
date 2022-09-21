@@ -2,17 +2,6 @@
   width: 100%;
   padding-top: 2.4em;
 }
-.app-content :first-child > div.todo-item-light, .app-content :first-child > div.todo-item-dark {
-  border-radius: 20px 20px 0px 0px;
-}
-.app-content :last-child > div.todo-item-light, .app-content :last-child > div.todo-item-dark {
-  border: none;
-  border-radius: 0px 0px 20px 20px;
-}
-.app-content :only-child > div.todo-item-light, .app-content :only-child > div.todo-item-dark {
-  border-radius: 20px;
-  border: none;
-}
 
 .clear-todos-light {
   display: flex;
@@ -48,4 +37,61 @@
   color: #000000;
   font-weight: normal;
   padding: 0.8em;
+}
+
+.color-1 {
+  background-color: #FF7C5E;
+  border: none;
+}
+
+.color-2 {
+  background-color: #FF8959;
+  border: none;
+}
+
+.color-3 {
+  background-color: #FF9654;
+  border: none;
+}
+
+.color-4 {
+  background-color: #FFA34F;
+  border: none;
+}
+
+.color-5 {
+  background-color: #FFB04A;
+  border: none;
+}
+
+.color-6 {
+  background-color: #F87156;
+  border: none;
+}
+
+.color-7 {
+  background-color: #FDC96E;
+  border: none;
+}
+
+.color-8 {
+  background-color: #88D6BB;
+  border: none;
+}
+
+.color-9 {
+  background-color: #9fa7f3;
+  border: none;
+}
+
+.color-10 {
+  background-color: #6bbdfc;
+  border: none;
+}
+
+.dynamic-border {
+  border-bottom: 1px solid black;
+}
+.dynamic-border:last-child {
+  border: none;
 }/*# sourceMappingURL=appContent.css.map */

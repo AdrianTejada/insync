@@ -50,10 +50,3 @@
         };
     };
 }
-
-@each $key, $val in $gradient {
-    .color-#{$key} {
-        background-color: $val;
-        border: none
-    }
-}

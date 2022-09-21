@@ -4,27 +4,6 @@
 .app-content {
     width: 100%;
     padding-top: 2.4em;
-
-
-    :first-child > {
-        div.todo-item-light, div.todo-item-dark {
-            border-radius: 20px 20px 0px 0px;
-        }
-    }
-
-    :last-child > {
-        div.todo-item-light, div.todo-item-dark {
-            border: none;
-            border-radius: 0px 0px 20px 20px;
-        }
-    }
-
-    :only-child > {
-        div.todo-item-light, div.todo-item-dark {
-            border-radius: 20px;
-            border: none
-        }
-    }
 }
 
 .clear-todos-light {
@@ -33,4 +12,19 @@
 
 .clear-todos-dark {
     @include clearTodos(map-get($global, 'white'), map-get($global, 'black'))
+}
+
+@each $key, $val in $gradient {
+    .color-#{$key} {
+        background-color: $val;
+        border: none
+    }
+}
+
+.dynamic-border {
+    border-bottom: 1px solid black;
+
+    &:last-child {
+        border:none
+    }
 }
