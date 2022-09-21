@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateFilter } from '../../Slices/todoSlice';
 import { motion } from 'framer-motion';
 import { AiOutlineInfo } from 'react-icons/ai';
+import { toast } from 'react-hot-toast';
 
 const tap = {scale: 0.9};
 
@@ -16,11 +17,15 @@ export default function Functions({
 }) {
   const filter = useSelector((state)=>state.todo.todoFilter);
   const theme = useSelector((state)=>state.todo.todoTheme);
+  const todoList = useSelector((state)=>state.todo.todoList);
   const dispatch = useDispatch();
 
   const handleFilterChange = (event) => {
     const status = event.target.value;
     dispatch(updateFilter(status));
+    if (todoList.length === 0) {
+      toast('add a task to change the list view')
+    }
   };
 
   return (
