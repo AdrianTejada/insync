@@ -1,0 +1,11 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.select-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    // width: 10em;
+}
+
