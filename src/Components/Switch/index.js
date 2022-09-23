@@ -18,11 +18,11 @@ export default function Switch() {
 
   return (
     <div className={`switch-${theme}`} onClick={()=>dispatch(updateTheme(theme))}>
-      <motion.div transition={spring}>
+      <motion.span transition={spring}>
         <motion.button layout>
           {theme === 'light' ? <TbNorthStar/> : <BsFillMoonStarsFill/>}
         </motion.button>
-      </motion.div>
+      </motion.span>
     </div>
   )
 }

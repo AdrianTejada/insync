@@ -6,9 +6,6 @@ import { toast } from 'react-hot-toast';
 import { updateFilter } from '../../Slices/todoSlice';
 import './selectButton.css';
 
-const tap = {
-  scale: 0.90
-}
 
 export default function SelectButton () {
   const theme = useSelector((state)=>state.todo.todoTheme);
@@ -20,12 +17,14 @@ export default function SelectButton () {
   const options = {
     hidden: {
       opacity: 0,
+      x: -20,
       transition: {
         duration: .2
       }
     },
     visible: {
       opacity: 1,
+      x: 0,
       transition: {
         duration: .2
       }
@@ -41,19 +40,14 @@ export default function SelectButton () {
   };
 
     return (<span className='select-button'>
-      <motion.button whileTap={tap} className={`button-secondary-${theme}`} onClick={()=>setIsOpen(!isOpen)} style={{minWidth: '6em', marginRight: '.5em'}}>
+      <button className={`button-secondary-${theme}`} onClick={()=>setIsOpen(!isOpen)} style={{borderRadius: isOpen ? '8px 0px 0px 8px' : null}}>
         {filter === 'all' ? 'view all' : filter}
-      </motion.button>
+      </button>
      <motion.div variants={options} initial='hidden' animate={isOpen ? 'visible' : 'hidden'} className='select-button-option'>
-        <button 
-        onClick={()=>handleFilterChange('all')}
-        >all</button>        
-        <button 
-        onClick={()=>handleFilterChange('incomplete')}
-        >incomplete</button>        
-        <button 
-        onClick={()=>handleFilterChange('complete')}
-        >complete</button>        
+        {filter === 'all' ?  <>
+        <button onClick={()=>handleFilterChange('incomplete')}>incomplete</button><button onClick={()=>handleFilterChange('complete')}>complete</button></> : 
+        filter === 'incomplete' ? <><button onClick={()=>handleFilterChange('all')}>view all</button><button onClick={()=>handleFilterChange('complete')}>complete</button></> : 
+        filter === 'complete' ? <><button onClick={()=>handleFilterChange('all')}>view all</button><button onClick={()=>handleFilterChange('incomplete')}>incomplete</button></> : null }  
       </motion.div>
     </span>
     )

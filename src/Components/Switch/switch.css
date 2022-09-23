@@ -1,4 +1,5 @@
 .switch-light {
+  min-width: 3em;
   max-width: 3em;
   height: 2.5em;
   display: flex;
@@ -7,7 +8,7 @@
   cursor: pointer;
   position: relative;
 }
-.switch-light > div {
+.switch-light > span {
   width: 100%;
   height: 1em;
   border-radius: 1em;
@@ -16,7 +17,7 @@
   justify-content: flex-end;
   align-items: center;
 }
-.switch-light > div > button {
+.switch-light > span > button {
   width: 2.25em;
   height: 2.25em;
   border-radius: 50%;
@@ -27,12 +28,13 @@
   align-items: center;
   cursor: pointer;
 }
-.switch-light > div > button > * {
+.switch-light > span > button > * {
   color: #868686;
   font-size: 1.2em;
 }
 
 .switch-dark {
+  min-width: 3em;
   max-width: 3em;
   height: 2.5em;
   display: flex;
@@ -41,7 +43,7 @@
   cursor: pointer;
   position: relative;
 }
-.switch-dark > div {
+.switch-dark > span {
   width: 100%;
   height: 1em;
   border-radius: 1em;
@@ -50,7 +52,7 @@
   justify-content: flex-start;
   align-items: center;
 }
-.switch-dark > div > button {
+.switch-dark > span > button {
   width: 2.25em;
   height: 2.25em;
   border-radius: 50%;
@@ -61,7 +63,7 @@
   align-items: center;
   cursor: pointer;
 }
-.switch-dark > div > button > * {
+.switch-dark > span > button > * {
   color: #868686;
   font-size: 1.2em;
 }/*# sourceMappingURL=switch.css.map */
