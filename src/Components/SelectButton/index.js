@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Button/button.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 import { updateFilter } from '../../Slices/todoSlice';
 import './selectButton.css';
@@ -17,7 +17,7 @@ export default function SelectButton () {
   const options = {
     hidden: {
       opacity: 0,
-      x: -20,
+      x: -30,
       transition: {
         duration: .2
       }
@@ -40,15 +40,17 @@ export default function SelectButton () {
   };
 
     return (<span className='select-button'>
-      <button className={`button-secondary-${theme}`} onClick={()=>setIsOpen(!isOpen)} style={{borderRadius: isOpen ? '8px 0px 0px 8px' : null}}>
+      <button className={`button-secondary-${theme}`} onClick={()=>setIsOpen(!isOpen)} style={{borderRadius: isOpen ? '8px 0px 0px 8px' : null, minWidth: '4.4em'}}>
         {filter === 'all' ? 'view all' : filter}
       </button>
-     <motion.div variants={options} initial='hidden' animate={isOpen ? 'visible' : 'hidden'} className='select-button-option'>
+      <AnimatePresence>
+      { isOpen && <motion.div variants={options} initial='hidden' animate={'visible'} className='select-button-option' exit='hidden'>
         {filter === 'all' ?  <>
         <button onClick={()=>handleFilterChange('incomplete')}>incomplete</button><button onClick={()=>handleFilterChange('complete')}>complete</button></> : 
         filter === 'incomplete' ? <><button onClick={()=>handleFilterChange('all')}>view all</button><button onClick={()=>handleFilterChange('complete')}>complete</button></> : 
         filter === 'complete' ? <><button onClick={()=>handleFilterChange('all')}>view all</button><button onClick={()=>handleFilterChange('incomplete')}>incomplete</button></> : null }  
-      </motion.div>
+      </motion.div>}
+      </AnimatePresence>
     </span>
     )
 }
