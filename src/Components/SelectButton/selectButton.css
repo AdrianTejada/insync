@@ -3,14 +3,15 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .select-button-option > button {
   color: #868686;
-  border-left: 1px solid #A4A4A4;
+  border-right: 1px solid #A4A4A4;
   border-bottom: 1px solid #A4A4A4;
   border-top: 1px solid #A4A4A4;
-  border-right: none;
+  border-left: none;
   background-color: inherit;
   font-size: 1.2em;
   height: 2em;
@@ -23,8 +24,4 @@
 }
 .select-button-option > button:last-child {
   border-radius: 0px 8px 8px 0px;
-  border-right: 1px solid #A4A4A4;
-}
-.select-button-option > button:first-child {
-  border-radius: 8px 0px 0px 8px;
 }/*# sourceMappingURL=selectButton.css.map */
