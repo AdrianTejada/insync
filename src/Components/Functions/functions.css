@@ -6,7 +6,7 @@
   position: static;
   z-index: 2;
 }
-.functions div {
+.functions div.row {
   width: 100%;
   display: flex;
   justify-content: space-between;

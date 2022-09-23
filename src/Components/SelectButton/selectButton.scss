@@ -1,0 +1,14 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.select-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.select-button-option {
+    @include selectButtonOption(map-get($light, 'gray'), map-get($global, 'gray'))
+}
+
