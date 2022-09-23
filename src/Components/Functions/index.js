@@ -17,13 +17,13 @@ export default function Functions({
 
   return (
     <div className='functions'>
-       <div>
+       <div className='row'>
         <motion.button whileTap={tap} onClick={onTodoClick} className={`add-todo-${theme}`}>
           <RiPlayListAddLine/>
         </motion.button>
         <Switch/>
        </div>
-       <div>
+       <div className='row'>
           <SelectButton/>
           <motion.button whileTap={tap} onClick={onAboutClick} className={`info-${theme}`}>
             <AiOutlineInfo/>

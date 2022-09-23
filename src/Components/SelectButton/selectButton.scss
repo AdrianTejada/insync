@@ -6,6 +6,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    // width: 10em;
+}
+
+.select-button-option {
+    @include selectButtonOption(map-get($light, 'gray'), map-get($global, 'gray'))
 }
 

@@ -396,3 +396,36 @@
         font-size: 1.5em;
     }
 }
+
+@mixin selectButtonOption ($border, $color) {
+    > button {
+        color: $color;
+        border: {
+            left: 1px solid $border;
+            bottom: 1px solid $border;
+            top: 1px solid $border;
+            right: none;
+        }
+        background-color: inherit;
+        font-size: 1.2em;
+        height: 2em;
+        font-family: $mainFont;
+        cursor: pointer;
+    
+        padding: {
+            top: 0px;
+            bottom: 0px;
+            left: .5em;
+            right: .5em;
+        }
+
+        &:last-child {
+            border-radius: 0px 8px 8px 0px;
+            border-right: 1px solid $border;
+        }
+        
+        &:first-child {
+            border-radius: 8px 0px 0px 8px;
+        }
+    }
+}

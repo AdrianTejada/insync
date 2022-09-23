@@ -22,12 +22,27 @@ export default function TodoModal({
   const handleSubmit  = () => {
     if (title) {
       if (type === 'new') {
+        var time = new Date().getDate().toString() + '.' + new Date().getMonth().toString() + '.' + new Date().getFullYear().toString() + ' ';
+        var hour = new Date().getHours().toString() + ':';
+        var minute = new Date().getMinutes().toString();
+
+        if (hour.length === 1) {
+          const zero = '0';
+          hour = zero.concat(hour)
+        }
+        if (minute.length === 1) {
+          const zero = '0';
+          minute = zero.concat(minute)
+        }
+
+        time = time + hour + minute
+
         dispatch(addTodo({
           id: uuid(),
           title,
           description: descript,
           color,
-          time: new Date().getDate().toString() + '.' + new Date().getMonth().toString() + '.' + new Date().getFullYear().toString() + ' ' + new Date().getHours().toString() + ':' + new Date().getMinutes().toString(),
+          time,
           status: 'incomplete',
         }));
         setTitle(null);
