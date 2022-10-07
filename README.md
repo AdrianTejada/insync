@@ -69,7 +69,9 @@ Designed and developed by Adrian Tejadda
 ### Built With
 
 * [![React][React.js]][React-url]
-
+* [![Redux][Redux.js]][Redux-url]
+* [![SASS][Sass]][Sass-url]
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -157,3 +159,7 @@ Special thank you to
 [product-screenshot]: images/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Redux.js]: https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=fff
+[Redux-url]: https://redux.js.org/
+[Sass]: https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=fff
+[Sass-url]: https://sass-lang.com/
