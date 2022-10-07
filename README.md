@@ -18,14 +18,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-<div align='center'>
   [![Contributors][contributors-shield]][contributors-url]
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
   [![MIT License][license-shield]][license-url]
   [![LinkedIn][linkedin-shield]][linkedin-url]
-</div>
 
 
 <!-- PROJECT LOGO -->
@@ -38,12 +36,12 @@
   <h3 align="center">InSync</h3>
 
   <p align="center">
-    A single page productibity web application.
+    A single page productivity web application.
     <br />
     <a href="https://github.com/AdrianTejada/insync"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://insynccc.netlify.app/">View Live Project</a>
+    <a href="https://insynccc.netlify.app/">Live Project</a>
     ·
     <a href="https://github.com/AdrianTejada/insync/issues">Report Bug</a>
     ·
@@ -84,12 +82,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A responsive productivity web application built with React.js. My main objective for this project was to ship a web app that included Redux, SCSS, and Framer Motion.
+A simple web application built with React.js. My objective for this project was to ship a web app that included Redux, SCSS, and Framer Motion.
 
 Designed and developed by Adrian Tejadda
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -103,29 +100,21 @@ Designed and developed by Adrian Tejadda
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 1. Install <a href='https://nodejs.org/en/'>Node.js.</a> (LTS)
-2. Install <a href='https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass'>Live Sass Compiler</a>
+2. Install the <a href='https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass'>Live Sass Compiler</a> extension for Visual Studio Code
 ### Installation
 
-
-1. Clone the Repo
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/AdrianTejada/insync.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+4. On the bottom bar, click Watch Sass to start to 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,9 +167,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Email - tejrian@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+LinkedIn - [https://www.linkedin.com/in/atej/](https://www.linkedin.com/in/atej/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,7 +206,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/AdrianTejada/insync.svg?style=for-the-badge
 [license-url]: https://github.com/AdrianTejada/insync/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/atej/
 [product-screenshot]: images/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
