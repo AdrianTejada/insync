@@ -131,11 +131,10 @@ LinkedIn - [https://www.linkedin.com/in/atej/](https://www.linkedin.com/in/atej/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Special thank you to <a href='https://github.com/ShaifArfan'>Shaif Arfan's<a> To-do list application <a href='https://www.youtube.com/watch?v=W0Uf_xu350k&t=17s&ab_channel=WEBCIFAR'>tutorial.<a>
+Special thank you to <a href='https://github.com/ShaifArfan'>Shaif Arfan's<a> to-do list application <a href='https://www.youtube.com/watch?v=W0Uf_xu350k&t=17s&ab_channel=WEBCIFAR'>tutorial.<a>
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
-* [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 
