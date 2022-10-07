@@ -71,6 +71,7 @@ Designed and developed by Adrian Tejadda
 * [![React][React.js]][React-url]
 * [![Redux][Redux.js]][Redux-url]
 * [![SASS][Sass]][Sass-url]
+* [![Framer Motion][Framer]][Framer-url]
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +131,7 @@ LinkedIn - [https://www.linkedin.com/in/atej/](https://www.linkedin.com/in/atej/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Special thank you to 
+Special thank you to <a href='https://github.com/ShaifArfan'>Shaif Arfan's<a> To-do list application <a href='https://www.youtube.com/watch?v=W0Uf_xu350k&t=17s&ab_channel=WEBCIFAR'>tutorial.<a>
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
@@ -163,3 +164,5 @@ Special thank you to
 [Redux-url]: https://redux.js.org/
 [Sass]: https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=fff
 [Sass-url]: https://sass-lang.com/
+[Framer]: https://img.shields.io/badge/framer%20motion-0055FF?style=for-the-badge&logo=framer&logoColor=fff
+[Framer-url]: https://www.framer.com/motion/
